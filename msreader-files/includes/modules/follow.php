@@ -856,8 +856,8 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                 $followed_by_user = $this->get_followed_sites();
                 
                 if(in_array($current_blog_id, $followed_by_user)) {
-                    $text = __( 'Verfolgte', 'wmd_msreader' );
-                    $hover_text = __( 'Nicht mehr folgen', 'wmd_msreader' );
+                    $text = __( 'Verfolgt', 'wmd_msreader' );
+                    $hover_text = __( 'Nicht verfolgen', 'wmd_msreader' );
                     $url = $this->get_module_dashboard_url(array('action' => 'unfollow', 'blog_id' => $current_blog_id));
                     $class = 'following';
                 }
