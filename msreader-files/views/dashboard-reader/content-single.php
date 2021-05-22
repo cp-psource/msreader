@@ -57,7 +57,7 @@
 					<span class="spinner spinner-save"></span>
 					<input type="hidden" name="comment_add_data[comment_parent]" id="comment-parent" value="0">
 					<input type="checkbox" name="privacy" value="privacy-key" class="privacyBox" aria-req="true">
-					<span class="pprivacy"> Mit dem absenden des Kommentars stimme ich den Datenschutzrichtlinien zu.<span>
+					<span class="pprivacy"><?php _e('Mit dem absenden des Kommentars stimme ich der' . '&nbsp;'. get_the_privacy_policy_link() . '&nbsp;' . 'zu.'); ?><span>
 					<input type="hidden" name="nonce_add_comment" id="nonce_add_comment" value="<?php echo wp_create_nonce( 'add_comment' ); ?>">
 				</p>
 			</form>
