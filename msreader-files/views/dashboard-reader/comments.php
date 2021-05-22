@@ -24,7 +24,7 @@ class MSReader_Dashboard_Walker_Comment extends Walker_Comment {
 
 			<div class="comment-author vcard">
 				<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-				<?php printf( __( '%s <span class="says">says:</span>', 'wmd_msreader' ), sprintf( '<b class="fn author">%s</b>', get_comment_author_link() ) ); ?>
+				<?php printf( __( '%s <span class="says">sagt:</span>', 'wmd_msreader' ), sprintf( '<b class="fn author">%s</b>', get_comment_author_link() ) ); ?>
 			</div>
 
 			<div class="comment-metadata">

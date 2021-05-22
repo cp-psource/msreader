@@ -52,7 +52,7 @@
 					<textarea id="comment" name="comment_add_data[comment]" cols="44" rows="7" aria-required="true"></textarea>
 				</p>
 				<p class="form-submit">
-					<span class="reply-info" style="display:none;"><small><?php _e('Reply to', 'wmd_msreader' ); ?>:</small> <strong class="reply-parent-name"></strong> <small>(<a class="reply-cancel" href="#"><?php _e('Abbrechen', 'wmd_msreader' ); ?></a>)</small></span>
+					<span class="reply-info" style="display:none;"><small><?php _e('Antwort an', 'wmd_msreader' ); ?>:</small> <strong class="reply-parent-name"></strong> <small>(<a class="reply-cancel" href="#"><?php _e('Abbrechen', 'wmd_msreader' ); ?></a>)</small></span>
 					<input name="submit" type="button" class="button button-primary right" id="submit" value="<?php _e('Kommentar hinzufügen', 'wmd_msreader' ); ?>">
 					<span class="spinner spinner-save"></span>
 					<input type="hidden" name="comment_add_data[comment_parent]" id="comment-parent" value="0">
