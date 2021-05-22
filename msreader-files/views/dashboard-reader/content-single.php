@@ -56,6 +56,8 @@
 					<input name="submit" type="button" class="button button-primary right" id="submit" value="<?php _e('Kommentar hinzufügen', 'wmd_msreader' ); ?>">
 					<span class="spinner spinner-save"></span>
 					<input type="hidden" name="comment_add_data[comment_parent]" id="comment-parent" value="0">
+					<input type="checkbox" name="privacy" value="privacy-key" class="privacyBox" aria-req="true">
+					<span class="pprivacy"> Mit dem absenden des Kommentars stimme ich den Datenschutzrichtlinien zu.<span>
 					<input type="hidden" name="nonce_add_comment" id="nonce_add_comment" value="<?php echo wp_create_nonce( 'add_comment' ); ?>">
 				</p>
 			</form>
