@@ -48,7 +48,7 @@ class WMD_MSReader_Module_FeaturedPosts extends WMD_MSReader_Modules {
 
     function add_featuring_button($button, $post) {
         if(is_super_admin() && $post->post_date != '0000-00-00 00:00:00') {
-            $text = (isset($post->featured) && $post->featured) ? __( 'Normal', 'wmd_msreader' ): __( 'Hervorheben', 'wmd_msreader' );
+            $text = (isset($post->featured) && $post->featured) ? __( 'Normal', 'wmd_msreader' ): __( 'Empfehlen', 'wmd_msreader' );
 
             $button .= '<button class="right button button-secondary featured-posts-control">'.$text.'</button>';
         }
@@ -58,7 +58,7 @@ class WMD_MSReader_Module_FeaturedPosts extends WMD_MSReader_Modules {
 
     function dashboard_single_add_featuring_button($links, $post) {
         if(is_super_admin() && $post->post_status == 'publish') {
-            $text = (isset($post->featured) && $post->featured) ? __( 'Normal', 'wmd_msreader' ): __( 'Hervorheben', 'wmd_msreader' );
+            $text = (isset($post->featured) && $post->featured) ? __( 'Normal', 'wmd_msreader' ): __( 'Empfehlen', 'wmd_msreader' );
 
             $links .= '<button class="featured-posts-control">'.$text.'</button>';
         }
@@ -73,7 +73,7 @@ class WMD_MSReader_Module_FeaturedPosts extends WMD_MSReader_Modules {
             $post->BLOG_ID = get_current_blog_id();
             $post = $this->additional_post_data($post);
 
-            $text = (isset($post->featured) && $post->featured) ? __( 'Normal', 'wmd_msreader' ): __( 'Hervorheben', 'wmd_msreader' );
+            $text = (isset($post->featured) && $post->featured) ? __( 'Normal', 'wmd_msreader' ): __( 'Empfehlen', 'wmd_msreader' );
 
             $content = $content.'<p><small><a style="text-transform:capitalize;" class="featured-posts-control msreader-frontend" href="#" data-blog_id="'.$post->BLOG_ID.'" data-post_id="'.$post->ID.'"  title="'.__( 'Einschließen/Ausschließen von der Liste der empfohlenen Beiträge in Reader', 'wmd_msreader' ).'">'.$text.'</a></small></p>';  
         }
@@ -88,7 +88,7 @@ class WMD_MSReader_Module_FeaturedPosts extends WMD_MSReader_Modules {
         wp_localize_script('jquery', 'msreader_featured_posts', array(
             'saving' => __( 'Speichern...', 'wmd_msreader' ), 
             'post_featured' => __( "Dieser Beitrag wird vhervorgehoben", "wmd_msreader" ),
-            'feature' => __( "Hervorheben", "wmd_msreader" ),
+            'feature' => __( "Empfehlen", "wmd_msreader" ),
             'unfeature' => __( "Normal", "wmd_msreader" ) 
         ));
     }
@@ -249,7 +249,7 @@ class WMD_MSReader_Module_FeaturedPosts extends WMD_MSReader_Modules {
                 $class = 'following';
             }
             else {
-                $text = __( 'Hervorheben', 'wmd_msreader' );
+                $text = __( 'Empfehlen', 'wmd_msreader' );
                 $hover_text = __( 'Folge', 'wmd_msreader' );
                 $url = $this->get_module_dashboard_url(array('action' => 'follow', 'blog_id' => $current_blog_id));
                 $class = 'follow';            
@@ -319,7 +319,7 @@ class WMD_MSReader_Module_FeaturedPosts extends WMD_MSReader_Modules {
     function get_empty_message() {
         $return = __( 'Noch nichts hier!', 'wmd_msreader' );
         if(is_super_admin())
-            $return .= __( '...Aber es sieht so aus, als wärst Du ein Super-Administrator, was bedeutet, dass Du Beiträge veröffentlichen kannst, indem Du auf die Schaltfläche "Hervorheben" klickst.', 'wmd_msreader' );
+            $return .= __( '...Aber es sieht so aus, als wärst Du ein Super-Administrator, was bedeutet, dass Du Beiträge veröffentlichen kannst, indem Du auf die Schaltfläche "Empfehlen" klickst.', 'wmd_msreader' );
         if($this->helpers->is_module_enabled('recent_posts'))
             $return .= '<br/> <a href="'.$this->get_module_dashboard_url(array(), 'recent_posts').'">'.__( 'Suche nach etwas Interessantem.', 'wmd_msreader' ).'</a>';
 
