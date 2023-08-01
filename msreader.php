@@ -9,12 +9,15 @@ Text Domain: wmd_msreader
 Author: WMS N@W
 Author URI: https://n3rds.work
 */
-require 'psource-plugin-update/plugin-update-checker.php';
-$MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://n3rds.work/wp-update-server/?action=get_metadata&slug=msreader', 
+
+require 'psource/psource-plugin-update/psource-plugin-updater.php';
+use Psource\PluginUpdateChecker\v5\PucFactory;
+$MyUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=msreader', 
 	__FILE__, 
 	'msreader' 
 );
+
 define( 'MSREADER_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 class WMD_MSReader {
