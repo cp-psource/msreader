@@ -23,7 +23,7 @@ abstract class WMD_MSReader_Modules {
 
     var $helpers;
 
-	function __construct($options = array(), $slug) {
+	function __construct( $slug, $options = array() ) {
 		global $msreader_available_modules, $wpdb, $msreader_helpers;
 
 		//set module details

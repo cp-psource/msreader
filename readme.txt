@@ -75,3 +75,4 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 * Neue Readme
 * Textanpassungen
 * PSOURCE Updater Integriert
+* Fix: PHP Deprecated:  Required parameter
