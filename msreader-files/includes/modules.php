@@ -27,8 +27,13 @@ abstract class WMD_MSReader_Modules {
 		global $msreader_available_modules, $wpdb, $msreader_helpers;
 
 		//set module details
-        end($msreader_available_modules);
-		$this->details = $msreader_available_modules[$slug];
+        /*end($msreader_available_modules);
+		$this->details = $msreader_available_modules[$slug];*/
+
+        // Check if $slug is a valid type (string) before accessing the array element
+    if (is_string($slug) && isset($msreader_available_modules[$slug])) {
+        // Set module details only if $slug is a valid string and exists in the array
+        $this->details = $msreader_available_modules[$slug];
 
         //set options for module
         $this->options = $options;
@@ -83,6 +88,11 @@ abstract class WMD_MSReader_Modules {
         if(isset($_GET['msreader_'.$this->details['slug']]) && $_GET['msreader_'.$this->details['slug']] == 'open_post' && isset($_GET['post_id']) && isset($_GET['blog_id'])) {
             add_action('init', array( $this, "open_site_post" ), 20);
         }
+
+    } else {
+        // Handle the case when $slug is not valid or not found in the array.
+        // You may throw an exception, log an error, or handle it based on your use case.
+    }
     }
     abstract function init();
 

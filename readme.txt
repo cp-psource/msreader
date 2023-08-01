@@ -13,16 +13,11 @@ Aktivierter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können
 
 == Description ==
 
-Mit dem Multisite-Reader erstellst Du einen Netzwerkweiten Newsfeed für Deine Benutzer/Autoren, etc. Sie können eigene Listen mit ihren Lieblingsinhalten anlegen, Empfehlen & Bewerten.
+Mit dem Multisite-Reader erstellst Du einen Netzwerkweiten Newsfeed für Deine Benutzer/Autoren, etc. Du kannst eigene Listen mit Deinen Lieblingsinhalten anlegen, Empfehlen & Bewerten.
 
-Sie können ganz einfach einzelnen Blogs in Deinem Netzwerk folgen um so über die Neusten Beiträge und Inhalte ihrer favorisierten Netzwerk-Seiten informiert zu bleiben.
+Du kannst ganz einfach einzelnen Blogs in Deinem Netzwerk folgen um so über die Neusten Beiträge und Inhalte Deiner favorisierten Netzwerk-Seiten informiert zu bleiben.
 
 [POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/psource-plugins/)
-
-[Projektseite](https://n3rds.work/piestingtal_source/ps-events-eventmanagement-fuer-wordpress/)
-[Handbuch](https://n3rds.work/docs/ps-events-plugin-handbuch/)
-[Supportforum](https://n3rds.work/forums/forum/psource-support-foren/ps-forum-supportforum/)
-[GitHub](https://github.com/piestingtal-source/ps-events)
 
 == Mehr PSOURCE ==
 
