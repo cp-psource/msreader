@@ -4,7 +4,7 @@ Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free
 Tags: multisite, reader, content, feed
 Requires at least: 4.9
 Tested up to: 5.6
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -64,7 +64,15 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 == ChangeLog ==
 
-= 1.3.1 = DerN3rd =
+= 1.3.2 =
+
+* JS Fix beim Laden des Readers
+* Textanpassungen
+* PhP8.3 Fix
+* +README.md
+* +Translations
+
+= 1.3.1 =
 
 * Veröffentlicht auf Piestingtal-Source
 * Neue Readme
