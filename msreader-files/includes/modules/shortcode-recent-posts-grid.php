@@ -384,14 +384,15 @@ class WMD_MSReader_Module_ShortcodePostsGrid extends WMD_MSReader_Modules {
 					}
 				</style>
 				<script type="text/javascript">
-				document.addEventListener("DOMContentLoaded", function(event) {
-					(function($) {
+					document.addEventListener("DOMContentLoaded", function(event) {
+						(function($) {
 						reader_post_grid.equal_height('.reader-pg-post');
-						$(window).resize(function() {
+
+						$(window).on('resize', function() {
 							reader_post_grid.equal_height('.reader-pg-post');
 						});
-					})(jQuery);
-				});
+						})(jQuery);
+					});
 				</script>
 			<?php
 			}
