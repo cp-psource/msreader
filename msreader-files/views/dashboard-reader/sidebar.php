@@ -85,4 +85,4 @@ foreach ($sidebar_widgets as $slug => $details) {
 
 do_action('msreader_dashboard_reader_sidebar_bottom');
 if(is_super_admin())
-	echo '<p style="margin:-10px 0 10px 0; text-align:center;"><small>'.sprintf(__('<a href="%s">Ändere die Reader-Einstellungen</a>', 'wmd_prettyplugins'), admin_url('network/settings.php?page=msreader.php')).'</small></p>';
+	echo '<p style="margin:-10px 0 10px 0; text-align:center;"><small>'.sprintf(__('<a href="%s">Change Reader settings</a>', 'wmd_prettyplugins'), admin_url('network/settings.php?page=msreader.php')).'</small></p>';

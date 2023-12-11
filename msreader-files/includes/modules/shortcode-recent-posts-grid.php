@@ -1,7 +1,7 @@
 <?php
 $module = array(
-	'name' => __( 'Shortcode - Beitrags-Grid', 'wmd_msreader' ),
-	'description' => __( 'Ermöglicht die Verwendung des Shortcodes [reader-posts-grid] zum Anzeigen des Beitrags-Grids verschiedener Reader-Module.', 'wmd_msreader' ),
+	'name' => __( 'Shortcode – Beitragsraster', 'wmd_msreader' ),
+	'description' => __( 'Ermöglicht die Verwendung des Shortcodes [reader-posts-grid], um das Beitragsraster verschiedener Reader-Module anzuzeigen.', 'wmd_msreader' ),
 	'slug' => 'shortcode_recent_posts_grid', 
 	'class' => 'WMD_MSReader_Module_ShortcodePostsGrid',
 	'can_be_default' => false,
@@ -384,15 +384,14 @@ class WMD_MSReader_Module_ShortcodePostsGrid extends WMD_MSReader_Modules {
 					}
 				</style>
 				<script type="text/javascript">
-					document.addEventListener("DOMContentLoaded", function(event) {
-						(function($) {
+				document.addEventListener("DOMContentLoaded", function(event) {
+					(function($) {
 						reader_post_grid.equal_height('.reader-pg-post');
-
-						$(window).on('resize', function() {
+						$(window).resize(function() {
 							reader_post_grid.equal_height('.reader-pg-post');
 						});
-						})(jQuery);
-					});
+					})(jQuery);
+				});
 				</script>
 			<?php
 			}

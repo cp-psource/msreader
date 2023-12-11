@@ -1,8 +1,8 @@
 <?php
 $module = array(
-	'name' => __( 'Folgen', 'wmd_msreader' ),
-	'description' => __( 'Aktiviert die Verfolgung von Webseiten im Netzwerk', 'wmd_msreader' ),
-    'menu_title' => __( 'Verfolgt', 'wmd_msreader' ),
+	'name' => __( 'Follow', 'wmd_msreader' ),
+	'description' => __( 'Ermöglicht das Folgen von Webseiten im Netzwerk', 'wmd_msreader' ),
+    'menu_title' => __( 'Following', 'wmd_msreader' ),
 	'slug' => 'follow', 
 	'class' => 'WMD_MSReader_Module_Follow',
     'default_options' => array(
@@ -48,7 +48,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
         if(!$this->helpers->is_module_enabled('user_widget')) {
             $link = $this->get_module_dashboard_url(array('action' => 'manage'));
             $active = ($this->helpers->is_page_link_active($link)) ? 'class="active" ' : '';
-            $widgets['reader']['data']['list'][$this->details['slug']] = $this->create_link_for_main_widget('</a><a '.$active.'href="'.$this->get_module_dashboard_url(array('action' => 'manage')).'" title="'.__('Manage followed sites', 'wmd_msreader').'"><span class="msreader-widget-links-element msreader-widget-links-icon dashicons-admin-generic"></span>');
+            $widgets['reader']['data']['list'][$this->details['slug']] = $this->create_link_for_main_widget('</a><a '.$active.'href="'.$this->get_module_dashboard_url(array('action' => 'manage')).'" title="'.__('Verfolgte Websites verwalten', 'wmd_msreader').'"><span class="msreader-widget-links-element msreader-widget-links-icon dashicons-admin-generic"></span>');
         }
         else
             $widgets['reader']['data']['list'][$this->details['slug']] = $this->create_link_for_main_widget();
@@ -65,29 +65,29 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
         $this->user_follow_data = $this->get_user_follow_data();
 
         if(!in_array($blog_id, $followed_by_user)) {
-            $text = __('Folgen', 'wmd_msreader');
-            $hover_text = __('Folgen', 'wmd_msreader');
+            $text = __('Follow', 'wmd_msreader');
+            $hover_text = __('Follow', 'wmd_msreader');
             $class = '';
             $manage_class = '';
         }
         else {
-            $text = __('Verfolgt', 'wmd_msreader');
-            $hover_text = __('Nicht mehr folgen', 'wmd_msreader');
+            $text = __('Following', 'wmd_msreader');
+            $hover_text = __('Unfollow', 'wmd_msreader');
             $class = ' following';
             $manage_class = '';    
         }
 
         if(isset($this->user_follow_data['association']['blog'.$blog_id]) && count($this->user_follow_data['association']['blog'.$blog_id]) > 0) {
             $text_manage = __('Listen verwalten', 'wmd_msreader');
-            $text_manage_title = __('Listen für diese Webseite verwalten', 'wmd_msreader');
+            $text_manage_title = __('Verwalten von Listen für diese Webseite', 'wmd_msreader');
         }
         else {
             $text_manage = __('Zu Listen hinzufügen', 'wmd_msreader');
-            $text_manage_title = __('Füge Webseiten zu den Listen in Reader hinzu', 'wmd_msreader');
+            $text_manage_title = __('Webseiten zu den Listen in Reader hinzufügen', 'wmd_msreader');
         }
 
         $content = 
-        '<a class="add-new-h2 button-small msreader-follow-button'.$class.'" title="'.__('Folgen/Nicht mehr folgen dieser Seite im Reader', 'wmd_msreader').'" href="#">
+        '<a class="add-new-h2 button-small msreader-follow-button'.$class.'" title="'.__('Follow/Unfollow dieser Webseite im Reader', 'wmd_msreader').'" href="#">
             <span class="msreader-follow-icon"></span> <span class="current-text">'.$text.'</span><span class="hover-text">'.$hover_text.'</span>
         </a>&nbsp;
         <div class="msreader-manage-follow msreader-popup-container">
@@ -113,7 +113,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
         $followed_by_user = $this->get_followed_sites(1);
 
         $user_info['stats']['following'] = 
-        '<div class="user-stat-follow user-stat'.$active.'"><a title="View list and manage followed sites" href="'.$link.'"><h4>'.__( 'Verfolgt', 'wmd_msreader' ).'</h4>
+        '<div class="user-stat-follow user-stat'.$active.'"><a title="View list and manage followed sites" href="'.$link.'"><h4>'.__( 'Following', 'wmd_msreader' ).'</h4>
         <p>'.count($followed_by_user).'</p></a></div>';
 
         return $user_info;
@@ -122,9 +122,9 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
     function enqueue_scripts() {
         wp_localize_script('jquery', 'msreader_follow', 
             array(
-                'following' => __( 'Verfolgt', 'wmd_msreader' ), 
-                'follow' => __( "Folgen", "wmd_msreader" ), 
-                'unfollow' => __( "Nicht mehr folgen", "wmd_msreader" ) )
+                'following' => __( 'Following', 'wmd_msreader' ), 
+                'follow' => __( "Follow", "wmd_msreader" ), 
+                'unfollow' => __( "Unfollow", "wmd_msreader" ) )
             );
     }
 
@@ -359,7 +359,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                         if(response != false) {
                             $(".msreader-post[data-blog_id='"+blog_id+"'] .msreader-manage-follow-button .current-text, msreader-post-overlay .msreader-manage-follow-button .current-text").text(response);
                             manage_form.find('.spinner').hide();
-                            manage_form.find('.msreader-close-popup').on( "click");
+                            manage_form.find('.msreader-close-popup').click();
 
                             if($('#msreader-follow-manage-widget').length) {
                                 var list_id = $('#msreader-follow-manage-widget').attr('data-follow-list');
@@ -387,7 +387,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                     });
                 }
                 else
-                    manage_form.find('.msreader-close-popup').on( "click");
+                    manage_form.find('.msreader-close-popup').click();
             }
 
             function list_html(blog_id, button) {
@@ -443,7 +443,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                     if($unfollowed_key !== false)
                         unset($this->user_follow_data['unfollowed'][$unfollowed_key]);
 
-                    $this->message = $blog_details->blogname.' '.__( 'wird jetzt verfolgt.', 'wmd_msreader' ).' <a href="'.get_site_url($blog_id).'">'.__( 'Besuche die Webseite', 'wmd_msreader' ).'</a>.';
+                    $this->message = $blog_details->blogname.' '.__( 'wird nun verfolgt.', 'wmd_msreader' ).' <a href="'.get_site_url($blog_id).'">'.__( 'Besuche die Website', 'wmd_msreader' ).'</a>.';
                     
                     if(defined('DOING_AJAX') && isset($_POST['action']) && $_POST['action'] == 'msreader_follow_control')
                         echo 'following';
@@ -456,7 +456,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                     if($followed_key !== false)
                         unset($this->user_follow_data['followed'][$followed_key]);
 
-                    $this->message = $blog_details->blogname.' '.__( 'wird nicht mehr verfolgt.', 'wmd_msreader' ).' <a href="'.get_site_url($blog_id).'">'.__( 'Besuche die Webseite', 'wmd_msreader' ).'</a>.';
+                    $this->message = $blog_details->blogname.' '.__( 'wird nicht mehr verfolgt.', 'wmd_msreader' ).' <a href="'.get_site_url($blog_id).'">'.__( 'Besuche die Website', 'wmd_msreader' ).'</a>.';
 
                     if(defined('DOING_AJAX') && isset($_POST['action']) && $_POST['action'] == 'msreader_follow_control')
                         echo 'follow';
@@ -467,7 +467,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
             }
             else {
                 $this->message_type = 0;
-                $this->message = __( 'Diese Aktion konnte nicht ausgeführt werden.', 'wmd_msreader' );
+                $this->message = __( 'Diese Aktion konnte nicht durchgeführt werden.', 'wmd_msreader' );
             }
         }
 
@@ -481,7 +481,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
         $blog_id = $blog_id ? $blog_id : (isset($this->args['blog_id']) ? $this->args['blog_id'] : false);
 
         $this->message_type = 0;
-        $this->message = __( 'Diese Aktion konnte nicht ausgeführt werden.', 'wmd_msreader' );
+        $this->message = __( 'Diese Aktion konnte nicht durchgeführt werden.', 'wmd_msreader' );
 
         check_ajax_referer( 'manage-follow-save', 'nonce' );
 
@@ -507,7 +507,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
 
                 if(defined('DOING_AJAX') && isset($_POST['action']) && $_POST['action'] == 'msreader_list_control')
                     if(count($lists_ids) > 0)
-                        echo __( 'Listen verwalten', 'wmd_msreader' );
+                        echo __( 'Verwalten von Listen', 'wmd_msreader' );
                     else
                         echo __( 'Zu Listen hinzufügen', 'wmd_msreader' );
             }
@@ -528,7 +528,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
     function list_manage() {
         if(isset($_POST['msreader_follow_manage']) && wp_verify_nonce($_POST['msreader_follow_manage'], 'msreader_follow_manage') && isset($_POST['follow_list'])) {
             $this->message_type = 0;
-            $this->message = __( 'Diese Aktion konnte nicht ausgeführt werden.', 'wmd_msreader' );
+            $this->message = __( 'Diese Aktion konnte nicht durchgeführt werden.', 'wmd_msreader' );
 
             $this->user_follow_data = $this->get_user_follow_data();
             $current_user_id = get_current_user_id();
@@ -543,7 +543,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
             }
             elseif(isset($_POST['delete'])) {
                 $this->message_type = 0;
-                $this->message = __( 'Du musst dies bestätigen, indem Du das Kontrollkästchen aktivieren, bevor Du diese Liste löschen.', 'wmd_msreader' );
+                $this->message = __( 'Bevor Du diese Liste löschst, musst Du sie durch Markieren des Kontrollkästchens bestätigen.', 'wmd_msreader' );
                 if(isset($_POST['delete_confirm']) && $_POST['delete_confirm']) {
                     unset($this->user_follow_data['lists'][$_POST['follow_list']]);
 
@@ -568,20 +568,20 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                     $count = $this->prepare_lists_for_blogs(array($_POST['follow_list']), $blogs_ids);
 
                     $this->message_type = 1;
-                    $this->message = sprintf( _n('%d Blog wurde der Liste hinzugefügt.', '%d Blogs wurden der Liste hinzugefügt.', count($count), 'wmd_msreader'), count($blogs_ids));
+                    $this->message = sprintf( _n('%d Blog wurde zur Liste hinzugefügt.', '%d Blogs wurden zur Liste hinzugefügt.', count($count), 'wmd_msreader'), count($blogs_ids));
 
                     update_user_option($current_user_id, 'msreader_follow', $this->user_follow_data, true);
                 }
                 else {
                     $this->message_type = 0;
-                    $this->message = sprintf(__( 'Wir konnten keine Webseite erkennen, die zu %s gehört.', 'wmd_msreader' ), get_site_option( 'site_name', 'network' ));
+                    $this->message = sprintf(__( 'Wir konnten keine Webseite finden, die zu %s gehört.', 'wmd_msreader' ), get_site_option( 'site_name', 'network' ));
                 }   
             }
         }
         elseif(isset($_POST['msreader_follow_list_create']) && wp_verify_nonce($_POST['msreader_follow_list_create'], 'msreader_follow_list_create')) {
             if(!isset($_POST['new_list_name']) || !$_POST['new_list_name']) {
                 $this->message_type = 0;
-                $this->message = __( 'Der Listenname muss ausgefüllt werden.', 'wmd_msreader' );
+                $this->message = __( 'Listenname muss ausgefüllt werden.', 'wmd_msreader' );
             }
             else {
                 $this->user_follow_data = $this->get_user_follow_data();
@@ -612,7 +612,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                 }
                 else {
                     $this->message_type = 0;
-                    $this->message = sprintf(__( 'Liste existiert bereits. Du kannst es <a href="%s">hier</a> verwalten.', 'wmd_msreader' ), $this->get_module_dashboard_url(array('action' => 'manage', 'follow_list' => $name_exists_key)));
+                    $this->message = sprintf(__( 'Liste existiert bereits. Du kannst sie <a href="%s">hier</a> verwalten.', 'wmd_msreader' ), $this->get_module_dashboard_url(array('action' => 'manage', 'follow_list' => $name_exists_key)));
                 }
             }
         }
@@ -647,7 +647,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
             ?>
             <div class="msreader-popup-inside">
                 <h4 class="msreader-show" href="#"><?php _e('Webseite zur neuen Liste hinzufügen', 'wmd_msreader'); ?></h4>
-                <input name="new_list_name" id="new-list-name" type="text" placeholder="<?php _e('Gib hier den Listennamen ein', 'wmd_msreader'); ?>"/>
+                <input name="new_list_name" id="new-list-name" type="text" placeholder="<?php _e('Gib hier den Namen der Liste ein', 'wmd_msreader'); ?>"/>
             </div>
             <hr/>
             <div class="msreader-popup-inside">
@@ -792,12 +792,12 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
 
                                     <div class="msreader-popup-inside">
                                         <h4 class="msreader-show" href="#">'.__('Name der neuen Liste', 'wmd_msreader').'</h4>
-                                        <input name="new_list_name" id="new-list-name" type="text" placeholder="'.__('Gib hier den Listennamen ein', 'wmd_msreader').'"/>
+                                        <input name="new_list_name" id="new-list-name" type="text" placeholder="'.__('Gib hier den Namen der Liste ein', 'wmd_msreader').'"/>
                                     </div>
                                     <hr/>
                                     <div class="msreader-popup-inside">
                                         <h4 class="msreader-show" href="#">'.__('Links zu Webseiten, die dieser Liste hinzugefügt werden', 'wmd_msreader').'</h4>
-                                        <textarea name="list_blogs_links" placeholder="'.sprintf(__('Füge bitte eine %s Webseite pro Zeile hinzu.', 'wmd_msreader'), get_site_option( 'site_name', 'network' )).'"></textarea>
+                                        <textarea name="list_blogs_links" placeholder="'.sprintf(__('Füge bitte eine %s-Seite pro Zeile hinzu.', 'wmd_msreader'), get_site_option( 'site_name', 'network' )).'"></textarea>
                                     </div>
                                     <hr/>
                                     <div class="msreader-popup-inside">
@@ -856,14 +856,14 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                 $followed_by_user = $this->get_followed_sites();
                 
                 if(in_array($current_blog_id, $followed_by_user)) {
-                    $text = __( 'Verfolgt', 'wmd_msreader' );
-                    $hover_text = __( 'Nicht verfolgen', 'wmd_msreader' );
+                    $text = __( 'Following', 'wmd_msreader' );
+                    $hover_text = __( 'Unfollow', 'wmd_msreader' );
                     $url = $this->get_module_dashboard_url(array('action' => 'unfollow', 'blog_id' => $current_blog_id));
                     $class = 'following';
                 }
                 else {
-                    $text = __( 'Folgen', 'wmd_msreader' );
-                    $hover_text = __( 'Folge', 'wmd_msreader' );
+                    $text = __( 'Follow', 'wmd_msreader' );
+                    $hover_text = __( 'Follow', 'wmd_msreader' );
                     $url = $this->get_module_dashboard_url(array('action' => 'follow', 'blog_id' => $current_blog_id));
                     $class = 'follow';            
                 }
@@ -876,7 +876,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                         'href' => $url,
                         'meta' => array(
                             'class' => $class,
-                            'title' => $hover_text.' '.__( 'dieser Seite', 'wmd_msreader' )
+                            'title' => $hover_text.' '.__( 'dieser Webseite', 'wmd_msreader' )
                         ),
                     ) 
                 );
@@ -944,7 +944,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                     $list_name = $this->user_follow_data['lists'][$follow_list]; 
                 }
                 else
-                    $title = __( 'Verwalte verfolgte Websites', 'wmd_msreader' );
+                    $title = __( 'Verwalte verfolgte Webseiten', 'wmd_msreader' );
 
                 $details = $this->create_list_widget($followed_by_user_ready, array('title' => $title));
                 
@@ -956,7 +956,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                         <ul class="list">';
                         foreach ($details['data']['list'] as $priority => $value) {
                             if(isset($value['link']) && $value['link'])
-                                $text = '<a class="site-url" href="'.$value['link'].'" title="'.__( 'Beiträge von dieser Webseite anzeigen', 'wmd_msreader' ).'">'.$value['title'].'</a>';
+                                $text = '<a class="site-url" href="'.$value['link'].'" title="'.__( 'Beiträge von dieser Webseite ansehen', 'wmd_msreader' ).'">'.$value['title'].'</a>';
                             else
                                 $text = $value['title'];
 
@@ -977,15 +977,15 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                         <h3>'.__( 'Füge dieser Liste Webseiten hinzu', 'wmd_msreader' ).'</h3>
                         <div class="inside">
                             '.__('Links zu Webseiten, die dieser Liste hinzugefügt werden', 'wmd_msreader').'<br/>
-                            <textarea name="list_blogs_links" placeholder="'.sprintf(__('Füge bitte eine %s Webseite pro Zeile hinzu.', 'wmd_msreader'), get_site_option( 'site_name', 'network' )).'"></textarea><br/>
-                            <input type="submit" class="button button-secondary button-small" name="add_sites" value="'.__( 'Füge Webseiten hinzu', 'wmd_msreader' ).'"/>
+                            <textarea name="list_blogs_links" placeholder="'.sprintf(__('Füge bitte eine %s-Seite pro Zeile hinzu.', 'wmd_msreader'), get_site_option( 'site_name', 'network' )).'"></textarea><br/>
+                            <input type="submit" class="button button-secondary button-small" name="add_sites" value="'.__( 'Webseiten hinzufügen', 'wmd_msreader' ).'"/>
                         </div>
                     </div>
                     <div class="postbox msreader-widget">
-                        <h3>'.__( 'Edit this list', 'wmd_msreader' ).'</h3>
+                        <h3>'.__( 'Bearbeite diese Liste', 'wmd_msreader' ).'</h3>
                         <div class="inside">
-                            '.__( 'Name ändern:', 'wmd_msreader' ).' <input name="name" type="text" value="'.esc_attr($list_name).'"/> <input type="submit" class="button button-secondary button-small" name="change_name" value="'.__( 'Speichern', 'wmd_msreader' ).'"/><br/>
-                            '.__( 'Lösche es: <small>Aktiviere dieses Kontrollkästchen zur Bestätigung', 'wmd_msreader' ).' <input name="delete_confirm" type="checkbox" value="1"/> '.__( 'und klicke</small>', 'wmd_msreader' ).' <input type="submit" class="button button-secondary button-small" name="delete" value="'.__( 'Löschen', 'wmd_msreader' ).'"/><br/>
+                            '.__( 'Namen ändern:', 'wmd_msreader' ).' <input name="name" type="text" value="'.esc_attr($list_name).'"/> <input type="submit" class="button button-secondary button-small" name="change_name" value="'.__( 'Speichern', 'wmd_msreader' ).'"/><br/>
+                            '.__( 'Lösche: <small>Markiere dieses Kontrollkästchen zur Bestätigung', 'wmd_msreader' ).' <input name="delete_confirm" type="checkbox" value="1"/> '.__( 'und klicke</small>', 'wmd_msreader' ).' <input type="submit" class="button button-secondary button-small" name="delete" value="'.__( 'Löschen', 'wmd_msreader' ).'"/><br/>
                         </div>
                     </div>
                 </form>';                    
@@ -1033,7 +1033,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
 
     function get_empty_message() {
         $followed_by_user = $this->get_followed_sites(1);
-        $return = !$followed_by_user ? __( 'Du folgst noch keiner Webseiten.', 'wmd_msreader' ) : __('Noch nichts hier!', 'wmd_msreader' );
+        $return = !$followed_by_user ? __( 'Du folgst noch keiner Webseite.', 'wmd_msreader' ) : __('Hier ist noch nichts!', 'wmd_msreader' );
         if($this->helpers->is_module_enabled('recent_posts') && !$followed_by_user)
             $return .= '<br/> <a href="'.$this->get_module_dashboard_url(array(), 'recent_posts').'">'.__( 'Suche nach etwas Interessantem', 'wmd_msreader' ).'</a>';
 
@@ -1092,15 +1092,15 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
         $button_visibility_for_options = array('both' => __( 'Angemeldete und abgemeldete Benutzer', 'wmd_msreader' ), 'loggedin' => __( 'Angemeldete Benutzer', 'wmd_msreader' ));
 
         return '
-            <label for="wmd_msreader_options_'.$this->details['slug'].'_follow_by_default">'.__( 'IDs von Webseiten, gefolgt von Standard (durch Kommas getrennt)', 'wmd_msreader' ).':<br/>
+            <label for="wmd_msreader_options_'.$this->details['slug'].'_follow_by_default">'.__( 'Standardmäßig verfolgte Webseiten mit den IDs (durch Kommas getrennt)', 'wmd_msreader' ).':<br/>
             <input type="text" class="smallt-ext ltr" name="wmd_msreader_options[modules_options]['.$this->details['slug'].'][follow_by_default]" value="'.$options['follow_by_default'].'"  id="wmd_msreader_options_'.$this->details['slug'].'_follow_by_default"/></label>
             <br/>
-            <label for="wmd_msreader_options_'.$this->details['slug'].'_button_visibility">'.__( 'Schaltfläche "Folgen" anzeigen', 'wmd_msreader' ).':</label><br/>
+            <label for="wmd_msreader_options_'.$this->details['slug'].'_button_visibility">'.__( 'Schaltfläche FOLLOW anzeigen', 'wmd_msreader' ).':</label><br/>
             <select name="wmd_msreader_options[modules_options]['.$this->details['slug'].'][button_visibility]" id="wmd_msreader_options_'.$this->details['slug'].'_button_visibility">
             '.$this->helpers->the_select_options($button_visibility_on_options, $options['button_visibility'], 0).'
             </select>
             <br/>
-            <label for="wmd_msreader_options_'.$this->details['slug'].'_button_visibility_for">'.__( 'Schaltfläche "Folgen" anzeigen für', 'wmd_msreader' ).':</label><br/>
+            <label for="wmd_msreader_options_'.$this->details['slug'].'_button_visibility_for">'.__( 'Schaltfläche FOLLOW anzeigen für', 'wmd_msreader' ).':</label><br/>
             <select name="wmd_msreader_options[modules_options]['.$this->details['slug'].'][button_visibility_for]"  id="wmd_msreader_options_'.$this->details['slug'].'_button_visibility_for">
             '.$this->helpers->the_select_options($button_visibility_for_options, $options['button_visibility_for'], 0).'
             </select>

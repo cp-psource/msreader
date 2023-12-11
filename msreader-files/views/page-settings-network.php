@@ -1,8 +1,7 @@
 <div class="wrap">
 
-	<?php screen_icon(); ?>
-	<h2><?php _e('Reader Einstellungen', 'wmd_msreader') ?> <a href="<?php echo admin_url('index.php?page=msreader.php'); ?>" class="add-new-h2"><?php _e('Gehe zum Reader', 'wmd_msreader') ?></a></h2>
-	<p><?php _e('Lese, entdecke, verfolge und moderiere Beiträge im Dashboard aller Webseiten in Deinem Netzwerk.', 'wmd_msreader') ?></p>
+	<h2><?php _e('Reader-Einstellungen', 'wmd_msreader') ?> <a href="<?php echo admin_url('index.php?page=msreader.php'); ?>" class="add-new-h2"><?php _e('Gehe zum Reader', 'wmd_msreader') ?></a></h2>
+	<p><?php _e('Lese, entdecke, folge und moderiere Beiträge im Dashboard aller Webseiten in Deinem Netzwerk.', 'wmd_msreader') ?></p>
 	<form action="" method="post" >
 
 		<?php
@@ -19,19 +18,19 @@
 				</th>
 
 				<td>
-					<label><input name="wmd_msreader_options[location]" type="radio" value="add_under_dashboard" <?php checked( 'add_under_dashboard', $options['location']) ?>> <?php _e('Der Reader soll sich unter Dashboard befinden', 'wmd_msreader') ?> > <span class="reader-menu-page"><?php echo stripslashes(esc_attr($options['name'])); ?></span></label><br/>
-					<label><input name="wmd_msreader_options[location]" type="radio" value="replace_dashboard_home" <?php checked( 'replace_dashboard_home', $options['location']) ?>> <?php _e('Der Reader soll die Standard-Startseite des WordPress-Dashboards ersetzen.', 'wmd_msreader') ?></label><br/>
+					<label><input name="wmd_msreader_options[location]" type="radio" value="add_under_dashboard" <?php checked( 'add_under_dashboard', $options['location']) ?>> <?php _e('Der Reader sollte sich unter Dashboard befinden', 'wmd_msreader') ?> > <span class="reader-menu-page"><?php echo stripslashes(esc_attr($options['name'])); ?></span></label><br/>
+					<label><input name="wmd_msreader_options[location]" type="radio" value="replace_dashboard_home" <?php checked( 'replace_dashboard_home', $options['location']) ?>> <?php _e('Der Reader sollte die Standard-Homepage des Dashboards ersetzen.', 'wmd_msreader') ?></label><br/>
 				</td>
 			</tr>
 
 			<tr valign="top">
 				<th scope="row">
-					<label for="wmd_msreader_options[name]"><?php _e('Wie lautet der Name der Reader-Seite?', 'wmd_msreader') ?></label>
+					<label for="wmd_msreader_options[name]"><?php _e('Wie soll die Reader-Seite heißen?', 'wmd_msreader') ?></label>
 				</th>
 
 				<td>
 					<input type="text" class="regular-text ltr" id="msreader-page-name" name="wmd_msreader_options[name]" value="<?php echo stripslashes(esc_attr($options['name'])); ?>" />
-					<p class="description"><?php _e('Dies ist der Name, der im Menü angezeigt wird', 'wmd_msreader') ?></p>
+					<p class="description"><?php _e('Dies ist der Name, der im Menü sichtbar sein wird', 'wmd_msreader') ?></p>
 				</td>
 			</tr>
 
@@ -61,12 +60,12 @@
 
 			<tr valign="top">
 				<th scope="row">
-					<label for="wmd_msreader_options[posts_from]"><?php _e('Sollen Beiträge von privaten Webseiten in den Reader aufgenommen werden?', 'wmd_msreader') ?></label>
+					<label for="wmd_msreader_options[posts_from]"><?php _e('Sollten Beiträge von privaten Webseiten in den Reader aufgenommen werden?', 'wmd_msreader') ?></label>
 				</th>
 
 				<td>
-					<label><input name="wmd_msreader_options[posts_from]" type="radio" value="all" <?php checked( 'all', $options['posts_from']) ?>> <?php _e('Ja, füge Beiträge von allen Webseiten hinzu', 'wmd_msreader') ?></label><br/>
-					<label><input name="wmd_msreader_options[posts_from]" type="radio" value="public" <?php checked( 'public', $options['posts_from']) ?>> <?php _e('Nein, nur Beiträge von öffentlichen Webseiten einschließen (wo "Suchmaschinen-Sichtbarkeit" aktiviert ist).', 'wmd_msreader') ?></label><br/>
+					<label><input name="wmd_msreader_options[posts_from]" type="radio" value="all" <?php checked( 'all', $options['posts_from']) ?>> <?php _e('Ja, Beiträge von allen Webseiten einbeziehen', 'wmd_msreader') ?></label><br/>
+					<label><input name="wmd_msreader_options[posts_from]" type="radio" value="public" <?php checked( 'public', $options['posts_from']) ?>> <?php _e('Nein, nur Beiträge von öffentlichen Webseiten einbeziehen (wo Suchmaschinensichtbarkeit aktiviert ist)', 'wmd_msreader') ?></label><br/>
 				</td>
 			</tr>
 

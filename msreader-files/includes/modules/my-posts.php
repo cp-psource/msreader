@@ -1,7 +1,7 @@
 <?php
 $module = array(
 	'name' => __( 'Meine Beiträge', 'wmd_msreader' ),
-	'description' => __( 'Zeigt die Beiträge der aktuellen Benutzer an', 'wmd_msreader' ),
+	'description' => __( 'Zeigt die Beiträge des aktuellen Benutzers an', 'wmd_msreader' ),
 	'slug' => 'my_posts', 
 	'class' => 'WMD_MSReader_Module_MyPosts',
     'type' => array('query', 'query-private')
@@ -21,7 +21,7 @@ class WMD_MSReader_Module_MyPosts extends WMD_MSReader_Modules {
 
         $current_user_id = get_current_user_id();
         $user_info['main'] = array_slice($user_info['main'], 0, 1, true) +
-        array("my_posts" => '<div class="user-posts'.$active.'"><small><a title="'.__( 'View your posts', 'wmd_msreader' ).'" href="'.$link.'">'.__( 'Meine Beiträge', 'wmd_msreader' ).'</a></small></div>') +
+        array("my_posts" => '<div class="user-posts'.$active.'"><small><a title="'.__( 'Deine Beiträge anzeigen', 'wmd_msreader' ).'" href="'.$link.'">'.__( 'Meine Beiträge', 'wmd_msreader' ).'</a></small></div>') +
         array_slice($user_info['main'], 1, count($user_info['main'])-1, true);
 
         return $user_info;

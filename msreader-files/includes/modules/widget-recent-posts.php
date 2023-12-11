@@ -1,7 +1,7 @@
 <?php
 $module = array(
-	'name' => __( 'Widget - Beitragsliste', 'wmd_msreader' ),
-	'description' => __( 'Ermöglicht die Verwendung des WordPress-Seitenleisten-Widgets, das die neuesten Beiträge anzeigt', 'wmd_msreader' ),
+	'name' => __( 'Widget – Beitragsliste', 'wmd_msreader' ),
+	'description' => __( 'Ermöglicht die Verwendung des Seitenleisten-Widgets, das die neuesten Beiträge anzeigt', 'wmd_msreader' ),
 	'slug' => 'widget_recent_posts', 
 	'class' => 'WMD_MSReader_Module_WidgetRecentPosts',
     'can_be_default' => false,
@@ -11,8 +11,11 @@ $module = array(
 class WMD_MSReader_Module_WidgetRecentPosts extends WMD_MSReader_Modules {
 
 	function init() {
-        add_action( 'widgets_init', function() {return register_widget("wmd_msreader_post_list");} );
-        add_action('admin_footer-widgets.php', array($this,'add_js'));
+        add_action('widgets_init', function() {
+            return register_widget('wmd_msreader_post_list');
+        });
+    
+        add_action('admin_footer-widgets.php', array($this, 'add_js'));
     }
 
     function add_js() {
@@ -99,7 +102,7 @@ class WMD_MSReader_Module_WidgetRecentPosts extends WMD_MSReader_Modules {
                                     echo '<br/>';
                             }
                             if($show_author)
-                                echo ' <cite class="post-author"><small>'.__( 'By ', 'wmd_msreader' ).$post->post_author_display_name.'</small></cite>';
+                                echo ' <cite class="post-author"><small>'.__( 'Von ', 'wmd_msreader' ).$post->post_author_display_name.'</small></cite>';
                         echo '</li>';
                     }
 
@@ -117,8 +120,8 @@ class WMD_MSReader_Module_WidgetRecentPosts extends WMD_MSReader_Modules {
 class wmd_msreader_post_list extends WP_Widget {
     //constructor
     function __construct() {
-        $widget_ops = array( 'description' => __( 'Liste der neuesten Reader-bezogenen Beiträge', 'wmd_msreader') );
-        parent::__construct( false, __( 'Reader: Letzte Beiträge', 'wmd_msreader' ), $widget_ops );
+        $widget_ops = array( 'description' => __( 'Liste der neuesten Beiträge', 'wmd_msreader') );
+        parent::__construct( false, __( 'Reader: Neueste Beiträge', 'wmd_msreader' ), $widget_ops );
     }
 
     /** @see WP_Widget::widget */
@@ -166,7 +169,7 @@ class wmd_msreader_post_list extends WP_Widget {
                 <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Anzahl anzuzeigender Beiträge:', 'wmd_msreader' ) ?></label>
+                <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Anzahl der anzuzeigenden Beiträge:', 'wmd_msreader' ) ?></label>
                 <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" min="1" max="20" value="<?php echo $number; ?>" size="3">
             </p>
             <p>
@@ -175,14 +178,14 @@ class wmd_msreader_post_list extends WP_Widget {
             </p>
             <p>
                 <input class="checkbox" type="checkbox" id="<?php echo $this->get_field_id( 'show_excerpt' ); ?>" name="<?php echo $this->get_field_name( 'show_excerpt' ); ?>" <?php checked( 'on', $show_excerpt);?>>
-                <label for="<?php echo $this->get_field_id( 'show_excerpt' ); ?>"><?php _e( 'Beitragsauszug anzeigen?', 'wmd_msreader' ) ?></label>
+                <label for="<?php echo $this->get_field_id( 'show_excerpt' ); ?>"><?php _e( 'Auszug aus dem Beitrag anzeigen?', 'wmd_msreader' ) ?></label>
             </p>
             <p>
                 <input class="checkbox" type="checkbox" id="<?php echo $this->get_field_id( 'show_author' ); ?>" name="<?php echo $this->get_field_name( 'show_author' ); ?>" <?php checked( 'on', $show_author);?>>
-                <label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Beitragsautor anzeigen?', 'wmd_msreader' ) ?></label>
+                <label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Autor des Beitrags anzeigen?', 'wmd_msreader' ) ?></label>
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id( 'module' ); ?>"><?php _e( "Beitragsquelle des Readers:", 'wmd_msreader' ) ?></label>
+                <label for="<?php echo $this->get_field_id( 'module' ); ?>"><?php _e( "Reader's Beitragsquelle:", 'wmd_msreader' ) ?></label>
                 <?php
                 $blocked_modules = apply_filters('msreader_widget_recent_posts_blocked_modules', array());
 
@@ -204,7 +207,7 @@ class wmd_msreader_post_list extends WP_Widget {
                 }
                 ?>
                 <br/>
-                <small><?php printf(__( "Aus dem Reader von %s", "wmd_msreader" ), $user_name); ?>.</small>
+                <small><?php printf(__( 'Aus dem Reader von %s', 'wmd_msreader' ), $user_name); ?>.</small>
             </p>
             <p class="msreader_widget_recent_posts_privacy_warning" style="color:red;<?php echo $current_module != 'myclass' ? 'display:none' : '';?>">
                 <?php _e( 'Bitte beachte die Privatsphäre der Benutzer.', 'wmd_msreader' ) ?>

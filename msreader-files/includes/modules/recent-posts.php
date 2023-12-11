@@ -1,6 +1,6 @@
 <?php
 $module = array(
-	'name' => __( 'Kürzliche Beiträge', 'wmd_msreader' ),
+	'name' => __( 'Neueste Beiträge', 'wmd_msreader' ),
 	'description' => __( 'Zeigt kürzlich hinzugefügte Beiträge an', 'wmd_msreader' ),
 	'slug' => 'recent_posts', 
 	'class' => 'WMD_MSReader_Module_RecentPost',

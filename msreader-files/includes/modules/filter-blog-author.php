@@ -1,7 +1,7 @@
 <?php
 $module = array(
 	'name' => __( 'Nach Autor oder Webseite filtern', 'wmd_msreader' ),
-	'description' => __( 'Zeigt Beiträge des ausgewählten Autors oder der ausgewählten Webseite an', 'wmd_msreader' ),
+	'description' => __( 'Zeigt Beiträge des ausgewählten Autors oder der Webseite an', 'wmd_msreader' ),
 	'slug' => 'filter_blog_author', 
 	'class' => 'WMD_MSReader_Module_FilterBlogAuthor',
     'can_be_default' => false,
@@ -19,18 +19,18 @@ class WMD_MSReader_Module_FilterBlogAuthor extends WMD_MSReader_Modules {
     }
 
     function add_author_link($name, $post) {
-        return '<a title="'.__('Zeige alle Beiträge dieses Autors', 'wmd_msreader').'" href="'.$this->get_module_dashboard_url(array('author_id' => $post->post_author)).'">'.$name.'</a>';
+        return '<a title="'.__('Alle Beiträge dieses Autors anzeigen', 'wmd_msreader').'" href="'.$this->get_module_dashboard_url(array('author_id' => $post->post_author)).'">'.$name.'</a>';
     }
 
     function add_blog_link($name, $post) {
-        return '<a title="'.__('Zeige alle Beiträge auf dieser Seite', 'wmd_msreader').'" href="'.$this->get_module_dashboard_url(array('blog_id' => $post->blog_details->blog_id)).'">'.$name.'</a>';
+        return '<a title="'.__('Alle Beiträge auf dieser Webseite anzeigen', 'wmd_msreader').'" href="'.$this->get_module_dashboard_url(array('blog_id' => $post->blog_details->blog_id)).'">'.$name.'</a>';
     }
 
     function get_page_title() {
         $title = '';
         if(isset($this->args['blog_id']) && is_numeric($this->args['blog_id'])) {
             $blog_details = get_blog_details($this->args['blog_id']);
-            return __('Beiträge von:', 'wmd_msreader').' <span>'.$blog_details->blogname.'</span> <a href="'.$blog_details->siteurl.'" class="add-new-h2"><span class="dashicons dashicons-admin-links"></span> '.__('Besuche Webseite', 'wmd_msreader').'</a>';
+            return __('Beiträge von:', 'wmd_msreader').' <span>'.$blog_details->blogname.'</span> <a href="'.$blog_details->siteurl.'" class="add-new-h2"><span class="dashicons dashicons-admin-links"></span> '.__('Webseite besuchen', 'wmd_msreader').'</a>';
         }
         elseif(isset($this->args['author_id']) && is_numeric($this->args['author_id'])) {
             $user_details = get_userdata( $this->args['author_id'] );

@@ -57,7 +57,7 @@ class WMD_MSReader_Module_PopularPost extends WMD_MSReader_Modules {
 
     function add_options_html($blank, $options) {
         return '
-            <label for="wmd_msreader_options[name]">'.__( 'Mindestanzahl von Kommentaren zum Beitrag, um ihn als beliebt zu behandeln', 'wmd_msreader' ).':</label><br/>
+            <label for="wmd_msreader_options[name]">'.__( 'Mindestanzahl von Kommentaren zu einem Beitrag, damit er als beliebt gilt', 'wmd_msreader' ).':</label><br/>
             <input type="number" min="1" class="small-text ltr" name="wmd_msreader_options[modules_options]['.$this->details['slug'].'][minimum_comment_count]" value="'.$options['minimum_comment_count'].'" />
         ';
     }

@@ -3,7 +3,7 @@
 Plugin Name: Multiste-Reader
 Plugin URI: https://n3rds.work
 Description: Aktivierter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können
-Version: 1.3.1
+Version: 1.3.3
 Network: false
 Text Domain: wmd_msreader
 Author: WMS N@W
@@ -31,7 +31,7 @@ class WMD_MSReader {
 	var $helpers;
 
 	function __construct() {
-		
+
 		add_action('plugins_loaded', array($this,'plugins_loaded'));
 
 		$this->setup();
@@ -92,7 +92,7 @@ class WMD_MSReader {
 
 		$this->plugin['default_site_options'] = array(
 			'location' => 'add_under_dashboard',
-			'name' => __( 'Multisite-Reader', 'wmd_msreader' ),
+			'name' => __( 'Reader', 'wmd_msreader' ),
 			'posts_from' => 'public',
 			'default_module' => 'recent_posts',
 			'modules' => array(),
@@ -248,7 +248,7 @@ class WMD_MSReader {
 
 	function activate() {
 	   	if(!is_multisite())
-	    	trigger_error(sprintf(__('Der Multisite Theme Manager funktioniert nur in der Multisite-Konfiguration. Du kannst <a href="%s" target="_blank">hier</a> mehr darüber lesen.', 'wmd_prettythemes'), 'http://codex.wordpress.org/Create_A_Network'),E_USER_ERROR);
+	    	trigger_error(sprintf(__('Multisite Theme Manager only works in multisite configuration. You can read more about it <a href="%s" target="_blank">here</a>.', 'wmd_prettythemes'), 'http://codex.wordpress.org/Create_A_Network'),E_USER_ERROR);
  		else {
 	        //save default options
 			if($this->plugin['site_options'] == 0)
@@ -265,7 +265,7 @@ class WMD_MSReader {
 
 		$page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 0;
 		if ((($page === 'msreader.php' && $pagenow == 'settings.php') || $pagenow == 'plugins.php') && is_super_admin() )
-			echo '<div class="error"><p>'.__('<strong>Der Reader benötigt das Post Indexer Plugin, um zu funktionieren.</strong> Currently it is not active. Du kannst dieses Plugin <a href="https://n3rds.work/piestingtal_source/multisite-beitragsindex-plugin/">hier</a> erhalten.', 'wmd_prettyplugins').'</p></div>';
+			echo '<div class="error"><p>'.__('<strong>Reader needs Post Indexer plugin to work.</strong> Currently it is not active. You can get this plugin <a href="https://premium.wpmudev.org/project/post-indexer/">here</a>.', 'wmd_prettyplugins').'</p></div>';
 	}
 
 	function welcome_notice() {
@@ -280,7 +280,7 @@ class WMD_MSReader {
 			update_site_option( 'msreader_notice_viewed', $notice_version );
 		}
 		elseif($notice_version < $desired_notice_version && $pagenow == 'plugins.php' && is_super_admin() )
-			echo '<div class="updated"><p>'.sprintf(__('Reader Plugin wurde aktiviert. Es kann unter Netzwerkadministrator>Einstellungen> <a href="%s">Reader</a> konfiguriert werden', 'wmd_prettyplugins'), admin_url('network/settings.php?page=msreader.php')).'</p></div>';
+			echo '<div class="updated"><p>'.sprintf(__('Reader plugin has been activated. It can be configured  by going to Network Admin > Settings > <a href="%s">Reader</a>', 'wmd_prettyplugins'), admin_url('network/settings.php?page=msreader.php')).'</p></div>';
 	}
 
 	function register_scripts_styles_admin($hook) {
@@ -304,8 +304,8 @@ class WMD_MSReader {
 			) );
 
 			wp_localize_script( 'wmd-msreader-admin', 'msreader_translation', array(
-				'confirm' => __('Bist du sicher, dass du das machen willst?', 'wmd_msreader'),
-				'confirm_child' => __('Bist du sicher, dass du das machen willst? Diese Aktion wirkt sich auch auf alle Antworten auf diesen Kommentar aus.', 'wmd_msreader'),
+				'confirm' => __('Bist Du sicher, dass Du dies tun möchtest?', 'wmd_msreader'),
+				'confirm_child' => __('Bist Du sicher, dass Du dies tun möchtest? Diese Aktion wirkt sich auch auf alle Antworten auf diesen Kommentar aus.', 'wmd_msreader'),
 				'approve' => __('Genehmigen', 'wmd_msreader'),
 				'unapprove' => __('Nicht genehmigen', 'wmd_msreader'),
 			) );
@@ -371,13 +371,13 @@ class WMD_MSReader {
 	}
 
 	function extra_profile_fields($user) {
-	    $reader_location_options = array('' => __( 'Standard', 'wmd_msreader' ), 'replace_dashboard_home' => __( 'Admin-Dashboard-Startseite', 'wmd_msreader' ), 'add_under_dashboard' => __( 'Untermenü des Admin-Dashboards', 'wmd_msreader' ));
+	    $reader_location_options = array('' => __( 'Standard', 'wmd_msreader' ), 'replace_dashboard_home' => __( 'Startseite des Admin-Dashboards', 'wmd_msreader' ), 'add_under_dashboard' => __( 'Untermenü des Admin-Dashboards', 'wmd_msreader' ));
 	    $current = get_user_meta( $user->ID, 'wmd_msreader_options_location', true );
 	    ?>
 		<table class="form-table">
 			<tbody>
 				<tr>
-					<th><label for="wmd_msreader_options_location"><?php echo _e( 'Standort des Readers', 'wmd_msreader' ); ?></label></th>
+					<th><label for="wmd_msreader_options_location"><?php echo _e( 'Reader Position', 'wmd_msreader' ); ?></label></th>
 					<td>
 						<select name="wmd_msreader_options_location" id="wmd_msreader_options_location">
 							<?php $this->helpers->the_select_options($reader_location_options, $current); ?>

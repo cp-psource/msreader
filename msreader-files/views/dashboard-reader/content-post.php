@@ -15,7 +15,7 @@
 			<div class="msreader-post-actions">
 				<?php 
 				echo apply_filters('msreader_read_more_button', 
-				'<button class="right button button-secondary msreader-open-post">'. __( 'Weiterlesen', 'wmd_msreader' ) .'</button>', 
+				'<button class="right button button-secondary msreader-open-post">'. __( 'Mehr lesen', 'wmd_msreader' ) .'</button>', 
 				$post); 
 				?>
 			</div>

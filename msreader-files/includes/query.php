@@ -33,31 +33,31 @@ class WMD_MSReader_Query {
 	function load_module($module, $is_main_query = 0) {
 		//load module
 		$this->module = $module;
-	
-		if ($this->module) {
-			//pass parameters to module
-			$this->module->main = $is_main_query ? 1 : 0;
-			$this->module->page = $this->page;
-			$this->module->limit = $this->limit;
-			$this->module->limit_sample = $this->limit_sample;
-			$this->module->args = $this->args;
-			$this->module->last_date = $this->last_date;
-			$this->module->user = ($this->user && is_numeric($this->user)) ? $this->user : get_current_user_id();
-			$this->module->blog = ($this->blog && is_numeric($this->blog)) ? $this->blog : get_current_blog_id();
-	
-			// Check if the details property exists before accessing it
-			if (property_exists($this->module, 'details')) {
-				$store_user_id = !$this->module->details['global_cache'] ? $this->module->user : '';
-				$store_blog_id = $this->module->details['blog_specific_cache'] ? $this->module->blog : '';
-				$this->module->query_hashes['get_posts'] = md5($this->module->cache_init . $this->module->details['slug'] . $this->page . $this->limit . http_build_query($this->args) . $store_user_id . $store_blog_id);
-			}
-		}
+
+		//pass parameters to module
+		$this->module->main = $is_main_query ? 1 : 0;
+		$this->module->page = $this->page;
+		$this->module->limit = $this->limit;
+		$this->module->limit_sample = $this->limit_sample;
+		$this->module->args = $this->args;
+		$this->module->last_date = $this->last_date;
+		$this->module->user = ($this->user && is_numeric($this->user)) ? $this->user : get_current_user_id();
+		$this->module->blog = ($this->blog && is_numeric($this->blog)) ? $this->blog : get_current_blog_id();
+
+		$this->module->load_module();
+
+		//check if its a query used by everybody
+		$store_user_id = !$this->module->details['global_cache'] ? $this->module->user : '';
+		//check if its a query related to currently displayed blog
+		$store_blog_id = $this->module->details['blog_specific_cache'] ? $this->module->blog : '';
+		//set up secret code for query
+		$this->module->query_hashes['get_posts'] = md5($this->module->cache_init.$this->module->details['slug'].$this->page.$this->limit.http_build_query($this->args).$store_user_id.$store_blog_id);	
 	}
 
 	function get_query_details() {
 		return array(
-			'page_title' => $this->module->get_page_title()
-		);
+				'page_title' => $this->module->get_page_title()
+			);
 	}
 
 	function get_posts() {

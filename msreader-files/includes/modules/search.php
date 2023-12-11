@@ -42,7 +42,7 @@ class WMD_MSReader_Module_Search extends WMD_MSReader_Modules {
         $search_value = isset($this->args['search_value']) ? esc_attr($this->args['search_value']) : '';
         $search_html = '
             <form id="msreader-searc" action="'.add_query_arg(array('module' => 'search'), admin_url('index.php?page=msreader.php')).'" method="post">
-                <p><input name="args[search_value]" class="fullwidth-text" type="text" value="'.$search_value.'" placeholder="'.__('Suchen...', 'wmd_msreader').'"/><p/>
+                <p><input name="args[search_value]" class="fullwidth-text" type="text" value="'.$search_value.'" placeholder="'.__('Suche...', 'wmd_msreader').'"/><p/>
                 <label for="search_title">
                 <input name="args[search_title]" id="search_title" type="checkbox" value="1" '.checked( isset($this->args['search_title']) ? $this->args['search_title'] : '', true, false ).'>'.__('Titel', 'wmd_msreader').' 
                 </label>

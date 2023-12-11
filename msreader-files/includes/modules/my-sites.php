@@ -1,7 +1,7 @@
 <?php
 $module = array(
 	'name' => __( 'Meine Webseiten', 'wmd_msreader' ),
-	'description' => __( 'Zeigt Beiträge von Webseiten aktueller Benutzer an', 'wmd_msreader' ),
+	'description' => __( 'Zeigt Beiträge von aktuellen Benutzer-Webseiten an', 'wmd_msreader' ),
 	'slug' => 'my_sites', 
 	'class' => 'WMD_MSReader_Module_MySites',
     'type' => array('query', 'query-private')

@@ -110,7 +110,7 @@ class WMD_MSReader_Module_TrendingTags extends WMD_MSReader_Modules {
 
     function add_options_html($blank, $options) {
         return '
-            <label for="wmd_msreader_options[name]">'.__( 'Anzahl der Links im Widget "Trending Tags"', 'wmd_msreader' ).':</label><br/>
+            <label for="wmd_msreader_options[name]">'.__( 'Anzahl der Links im Widget "Trend-Tags".', 'wmd_msreader' ).':</label><br/>
             <input type="number" class="small-text ltr" name="wmd_msreader_options[modules_options]['.$this->details['slug'].'][widget_links_limit]" value="'.$options['widget_links_limit'].'" /><br/>
             <label for="wmd_msreader_options[name]">'.__( 'Anzahl der kürzlich hinzugefügten Tags, um zu überprüfen, welche beliebt sind', 'wmd_msreader' ).':</label><br/>
             <input type="number" class="small-text ltr" name="wmd_msreader_options[modules_options]['.$this->details['slug'].'][widget_sample_limit]" value="'.$options['widget_sample_limit'].'" />

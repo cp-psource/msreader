@@ -1,7 +1,7 @@
 <?php
 $module = array(
 	'name' => __( 'Benutzerinformation', 'wmd_msreader' ),
-	'description' => __( 'Zeigt zusätzliche Informationen zum aktuellen Benutzer im Widget der Hauptleserseite an', 'wmd_msreader' ),
+	'description' => __( 'Zeigt zusätzliche Informationen zum aktuellen Benutzer im Haupt-Widget der Leserseite an', 'wmd_msreader' ),
 	'slug' => 'user_widget', 
 	'class' => 'WMD_MSReader_Module_UserWidget',
     'can_be_default' => false,
@@ -59,7 +59,7 @@ class WMD_MSReader_Module_UserWidget extends WMD_MSReader_Modules {
         //$user_info['main']['url'] = '<div class="user-site-url"><small><a title="Visit site" href="'.$user_site_url.'">'.str_replace('https://', '', str_replace('http://', '', $user_site_url)).'</a></small></div>';
 
         $user_info['stats']['my-sites'] = 
-        '<a title="'.__( 'Zeige Deine Webseiten an', 'wmd_msreader' ).'" href="'.admin_url('my-sites.php').'"><h4>'.__( 'Meine Webseiten', 'wmd_msreader' ).'</h4>
+        '<a title="'.__( 'Sieh Dir Deine Webseiten an', 'wmd_msreader' ).'" href="'.admin_url('my-sites.php').'"><h4>'.__( 'Meine Webseiten', 'wmd_msreader' ).'</h4>
         <p>'.count($user_sites).'</p></a>';
 
         /*

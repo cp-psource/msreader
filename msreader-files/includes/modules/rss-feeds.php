@@ -1,7 +1,7 @@
 <?php
 $module = array(
 	'name' => __( 'RSS Feeds', 'wmd_msreader' ),
-	'description' => __( 'Ermöglicht Benutzern das Abrufen von Links für alle in Reader verfügbaren Beitragslisten', 'wmd_msreader' ),
+	'description' => __( 'Ermöglicht Benutzern, Links für alle im Reader verfügbaren Beitragslisten abzurufen', 'wmd_msreader' ),
 	'slug' => 'rss_feeds', 
 	'class' => 'WMD_MSReader_Module_RssFeeds',
     'can_be_default' => false,
@@ -35,7 +35,7 @@ class WMD_MSReader_Module_RssFeeds extends WMD_MSReader_Modules {
         $blocked_modules = apply_filters('msreader_rss_feeds_blocked_modules', array());
 
         if(in_array('query', $msreader_main_query->module->details['type']) && !in_array($msreader_main_query->module->details['slug'], $blocked_modules))
-            $current_title = $current_title.'<a class="msreader-rss-feeds-link dashicons dashicons-rss" href="#" title="'.__('Hole Dir einen privaten RSS-Feed für diese Seite', 'wmd_msreader').'"></a>';
+            $current_title = $current_title.'<a class="msreader-rss-feeds-link dashicons dashicons-rss" href="#" title="'.__('Erhalte einen privaten RSS-Feed für diese Seite', 'wmd_msreader').'"></a>';
         
         return $current_title;
     }
@@ -59,8 +59,8 @@ class WMD_MSReader_Module_RssFeeds extends WMD_MSReader_Modules {
                         <input type="text" class="regular-text code" value="<?php echo $feed_url; ?>"/>
                     </p>
                     <p>
-                        <?php _e('Bitte beachte dass jeder mit dieser Feed-URL möglicherweise den Inhalt von Beiträgen anzeigen kann.', 'wmd_msreader'); ?>
-                         <small><?php _e('Du kannst ALLE privaten Feed-URLs zurücksetzen, indem Du hier auf <a href="#" class="msreader-rss-feeds-reset-key">klickst</a>.', 'wmd_msreader'); ?></small>
+                        <?php _e('Bitte beachte, dass möglicherweise jeder mit dieser Feed-URL den Beitragsinhalt sehen kann.', 'wmd_msreader'); ?>
+                         <small><?php _e('Du kannst ALLE privaten Feed-URLs zurücksetzen, indem Du <a href="#" class="msreader-rss-feeds-reset-key">hier klickst</a>.', 'wmd_msreader'); ?></small>
                     </p>
                  </div>
             </div>

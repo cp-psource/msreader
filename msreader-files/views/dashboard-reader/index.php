@@ -1,6 +1,5 @@
 <div id="msreader-dashboard" class="wrap">
 
-	<?php screen_icon(); ?>
 	<h2><?php echo apply_filters('msreader_dashboard_page_title', $query_details['page_title']); ?></h2>
 	<?php do_action('msreader_dashboard_after_page_title'); ?>
 
@@ -27,7 +26,7 @@
 				<?php do_action('msreader_dashboard_before_post_list'); ?>
 				<?php include('404.php'); ?>
 				<div class="msreader-post-loader">
-					<img alt="<?php _e( 'Loading...', 'wmd_msreader' ); ?>" src="<?php echo includes_url('images/spinner-2x.gif'); ?>"/>
+					<img alt="<?php _e( 'Wird geladen...', 'wmd_msreader' ); ?>" src="<?php echo includes_url('images/spinner-2x.gif'); ?>"/>
 				</div>
 			</div>
 
