@@ -153,7 +153,7 @@ class WMD_MSReader_Module_ShortcodePostsGrid extends WMD_MSReader_Modules {
 													<span class="reader-pg-post-time">
 														<?php echo $post->post_date_relative; ?>
 													</span>
-													<?php _e( 'vor', 'wmd_msreader' ); ?>
+													<?php _e( 'zuvor', 'wmd_msreader' ); ?>
 												<?php } ?>    
 												<?php if(!$attrs['hide_author']) { ?>
 													<?php _e( 'von', 'wmd_msreader' ); ?><br/>

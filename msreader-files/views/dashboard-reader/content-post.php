@@ -28,7 +28,7 @@
 
 			<div class="vertical-middle">
 				<span class="post-time" data-post_time="<?php echo $post->post_date_stamp; ?>"><?php echo $post->post_date_relative; ?></span>
-				<?php _e( 'vor', 'wmd_msreader' ); ?>
+				<?php _e( 'zuvor', 'wmd_msreader' ); ?>
 				<?php _e( 'von', 'wmd_msreader' ); ?>
 				<?php echo apply_filters('msreader_post_author', $post->post_author_display_name, $post); ?>
 				<br/>

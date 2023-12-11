@@ -28,7 +28,7 @@ Du wirst überrascht sein, welche Auswirkungen dies auf Deine Benutzer hat – E
 
   _Wichtig: Der Reader muss netzwerkaktiviert sein und erfordert das Multisite Beitragsindex-Plugin, um Deine Netzwerkinhalte abzurufen._
 
-* Wenn Du Multisite Beitragsindex noch nicht installiert und konfiguriert und Dein Netzwerk indiziert hast, tue Sie dies bitte zuerst.
+* Wenn Du Multisite Beitragsindex noch nicht installiert und konfiguriert und Dein Netzwerk indiziert hast, tue dies bitte zuerst.
 
 Sobald Reader installiert und netzwerkaktiviert ist, siehst Du in Deinem Menü „Netzwerkeinstellungen“ ein neues Untermenüelement: Reader.
 
@@ -58,27 +58,27 @@ Die Verwendung des Readers ist für den Endbenutzer sehr intuitiv und bietet Too
 
 ### Brande den Reader für Dein Netzwerk
 
-Mit dem Optionsfeld im Netzwerkadministrator können Sie die Funktionen und das Verhalten des Readers auf allen Sites in Ihrem Netzwerk steuern. Als Erstes möchten wir entscheiden, wo der Reader im Admin-Menü jeder Site angezeigt werden soll und wie er in Ihrem Netzwerk heißen soll.
+Mit dem Optionsfeld im Netzwerkadministrator kannst Du die Funktionen und das Verhalten des Readers auf allen Webseiten in Deinem Netzwerk steuern. Als Erstes möchten wir entscheiden, wo der Reader im Admin-Menü jeder Webseite angezeigt werden soll und wie er in Deinem Netzwerk heißen soll.
 
-1\. _Wo soll der Reader sein?_ bietet Ihnen zwei Möglichkeiten. Sie können Folgendes auswählen:
+1\. _Wo soll der Reader sein?_ bietet Dir zwei Möglichkeiten. Du kannst Folgendes auswählen:
 
-* Fügen Sie Reader als neues Element im Dashboard-Menü hinzu
-* Ersetzen Sie den Standard-Dashboard-Bildschirm durch Reader
+* Füge Reader als neues Element im Dashboard-Menü hinzu
+* Ersetze den Standard-Dashboard-Bildschirm durch Reader
 
 Das Hinzufügen von Reader als neues Element bewirkt, was der Name verspricht: Es wird ein neues Dashboard-Menüelement hinzugefügt, das mit der Reader-Seite im Admin verknüpft ist.
-Wenn Sie ihn jedoch so einstellen, dass er den Standard-Dashboard-Bildschirm ersetzt, werden Ihre Netzwerkbenutzer stattdessen von Ihrem attraktiven neuen Reader begrüßt, wenn sie sich bei ihren Websites anmelden. Woot!
+Wenn Du ihn jedoch so einstellst, dass er den Standard-Dashboard-Bildschirm ersetzt, werden Deine Netzwerkbenutzer stattdessen von Deinem attraktiven neuen Reader begrüßt, wenn sie sich bei ihren Webseiten anmelden. Woot!
 
-2\. Mit _Whats The Reader page name?_ können Sie das im Menü angezeigte Label anpassen, damit Sie es besser in Ihre Nische integrieren können.
+2\. Mit _Name der Reader-Seite?_ kannst Du das im Menü angezeigte Label anpassen, damit Du es besser in Deine Nische integrieren kannst.
 Kommen wir nun zu all diesen coolen Funktionen!
 
 ### Funktionen aktivieren/deaktivieren
 
-Es könnte nicht einfacher sein, Reader in Ihrem Netzwerk zum Laufen zu bringen! Alles, was Sie wirklich tun müssen, ist zu entscheiden, welche Funktionen Sie aktivieren möchten. Sie sind alle standardmäßig aktiviert, wenn Sie das Plugin zum ersten Mal installieren, Sie können sie jedoch nach Ihren Wünschen einrichten. !
+Es könnte nicht einfacher sein, Reader in Deinem Netzwerk zum Laufen zu bringen! Alles, was Du wirklich tun musst, ist zu entscheiden, welche Funktionen Du aktivieren möchtest. Sie sind alle standardmäßig aktiviert, wenn Du das Plugin zum ersten Mal installierst, Du kannst sie jedoch nach Deinen Wünschen einrichten. !
 
 
 ##### Beliebte Beiträge
 
-Mit dem Modul „Featured Posts“ können Sie als Netzwerkadministrator beliebige Beiträge zu einer Featured List hinzufügen. Besuchen Sie dazu den Reader im Adminbereich Ihrer Hauptseite und klicken Sie in jedem Beitrag, der im Hauptinhaltsbereich angezeigt wird, auf die Schaltfläche „Feature“. ![ Leser-Feature-Beitrag Jeder Beitrag, der vorgestellt wurde, wird zur Erinnerung mit einem kleinen grünen Stern in der oberen rechten Ecke angezeigt, und die Schaltfläche ändert sich in „Feature aufheben“, sodass Sie ihn später bei Bedarf aus der Feature-Liste entfernen können. Vom Leser hervorgehobene Beiträge Benutzer auf jeder Website in Ihrem Netzwerk können jetzt filtern, was im Hauptinhaltsbereich ihres Readers angezeigt wird, um nur hervorgehobene Beiträge anzuzeigen, indem sie im Haupt-Widget auf den Link „Hervorgehobene Beiträge“ klicken. Beachten Sie, dass die Schaltfläche „Feature/Feature deaktivieren“ nur für Sie als Netzwerkadministratorbenutzer verfügbar ist, für Sie jedoch auf allen Websites in Ihrem Netzwerk sichtbar ist. Site-Administratoren und andere Benutzer können der Featured List keine Beiträge hinzufügen oder daraus entfernen.
+Mit dem Modul „Ausgewählte Beiträge“ kannst Du als Netzwerkadministrator beliebige Beiträge zu einer Featured Liste hinzufügen. Besuche dazu den Reader im Adminbereich Deiner Hauptseite und klicke in jedem Beitrag, der im Hauptinhaltsbereich angezeigt wird, auf die Schaltfläche „Feature“. ![ Reader-Feature-Beitrag Jeder Beitrag, der vorgestellt wurde, wird zur Erinnerung mit einem kleinen grünen Stern in der oberen rechten Ecke angezeigt, und die Schaltfläche ändert sich in „Feature aufheben“, sodass Du ihn später bei Bedarf aus der Feature-Liste entfernen kannst. Vom Reader hervorgehobene Beiträge Benutzer auf jeder Website in Ihrem Netzwerk können jetzt filtern, was im Hauptinhaltsbereich ihres Readers angezeigt wird, um nur hervorgehobene Beiträge anzuzeigen, indem sie im Haupt-Widget auf den Link „Hervorgehobene Beiträge“ klicken. Beachten Sie, dass die Schaltfläche „Feature/Feature deaktivieren“ nur für Sie als Netzwerkadministratorbenutzer verfügbar ist, für Sie jedoch auf allen Websites in Ihrem Netzwerk sichtbar ist. Site-Administratoren und andere Benutzer können der Featured List keine Beiträge hinzufügen oder daraus entfernen.
 
 ##### Nach Autor oder Website filtern
 

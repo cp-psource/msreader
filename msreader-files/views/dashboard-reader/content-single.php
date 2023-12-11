@@ -18,7 +18,7 @@
 		<h3 class="theme-name"><?php echo apply_filters('msreader_post_title', get_the_title(), $post); ?><span class="theme-version msreader-blogname"><?php echo apply_filters('msreader_post_blog', $post->blog_details->blogname, $post); ?></span></h3>
 		<h4 class="theme-author">
 			<?php echo human_time_diff( get_the_time('U'), time() ); //we are inside blog, we have direct access to post ?>
-			<?php _e( 'vor', 'wmd_msreader' ); ?>
+			<?php _e( 'zuvor', 'wmd_msreader' ); ?>
 			<?php _e( 'von', 'wmd_msreader' ); ?>
 			<?php echo apply_filters('msreader_post_author', get_the_author(), $post); ?>
 		</h4>
