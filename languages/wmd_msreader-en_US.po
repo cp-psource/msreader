@@ -1,0 +1,1077 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Multiste-Reader\n"
+"POT-Creation-Date: 2023-12-12 17:36+0100\n"
+"PO-Revision-Date: 2023-12-12 17:37+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: msreader.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: psource/psource-plugin-update/vendor\n"
+
+#: msreader-files/includes/helpers.php:75
+msgid "Wahr"
+msgstr "True"
+
+#: msreader-files/includes/helpers.php:75
+msgid "Falsch"
+msgstr "False"
+
+#: msreader-files/includes/modules.php:106
+#: msreader-files/includes/modules/featured-posts.php:320
+#: msreader-files/includes/modules/follow.php:1036
+#, fuzzy
+msgid "Hier ist noch nichts!"
+msgstr "Nothing here yet!"
+
+#: msreader-files/includes/modules/featured-posts.php:3
+#, fuzzy
+msgid "Ausgewählte Beiträge"
+msgstr "Selected contributions"
+
+#: msreader-files/includes/modules/featured-posts.php:4
+#, fuzzy
+msgid "Aktiviert Ausgewählte Beiträge"
+msgstr "Activated Selected contributions"
+
+#: msreader-files/includes/modules/featured-posts.php:44
+#, fuzzy
+msgid "Dieser Beitrag wird ausgewählt"
+msgstr "This post will be selected"
+
+#: msreader-files/includes/modules/featured-posts.php:51
+#: msreader-files/includes/modules/featured-posts.php:61
+#: msreader-files/includes/modules/featured-posts.php:76
+#: msreader-files/includes/modules/featured-posts.php:92
+#: msreader-files/includes/modules/featured-posts.php:247
+#, fuzzy
+msgid "Unfeature"
+msgstr "Unfeature"
+
+#: msreader-files/includes/modules/featured-posts.php:51
+#: msreader-files/includes/modules/featured-posts.php:61
+#: msreader-files/includes/modules/featured-posts.php:76
+#: msreader-files/includes/modules/featured-posts.php:91
+#: msreader-files/includes/modules/featured-posts.php:252
+msgid "Feature"
+msgstr "feature "
+
+#: msreader-files/includes/modules/featured-posts.php:78
+#, fuzzy
+msgid "Include/Exclude from featured post list in Reader"
+msgstr "Include/Exclude from featured post list in Reader"
+
+#: msreader-files/includes/modules/featured-posts.php:89
+#, fuzzy
+msgid "Speichern..."
+msgstr "Save..."
+
+#: msreader-files/includes/modules/featured-posts.php:90
+#, fuzzy
+msgid "Dieser Beitrag ist ausgewählt"
+msgstr "This post is selected"
+
+#: msreader-files/includes/modules/featured-posts.php:246
+msgid "Featured"
+msgstr "Featured"
+
+#: msreader-files/includes/modules/featured-posts.php:253
+msgid "Folgen"
+msgstr "repercussions "
+
+#: msreader-files/includes/modules/featured-posts.php:266
+#: msreader-files/includes/modules/follow.php:879
+#, fuzzy
+msgid "dieser Webseite"
+msgstr "this website"
+
+#: msreader-files/includes/modules/featured-posts.php:322
+#, fuzzy
+msgid ""
+"...Aber es sieht so aus, als wärst Du Superadministrator, was bedeutet, dass "
+"Du Beiträge hervorheben kannst, indem Du auf die Schaltfläche \"Feature\" "
+"klickst."
+msgstr ""
+"...But it looks like you are a super administrator, which means you can "
+"highlight posts by clicking on the \"Feature\" button."
+
+#: msreader-files/includes/modules/featured-posts.php:324
+#, fuzzy
+msgid "Suche nach etwas Interessantem."
+msgstr "Search for something interesting."
+
+#: msreader-files/includes/modules/filter-blog-author.php:3
+#, fuzzy
+msgid "Nach Autor oder Webseite filtern"
+msgstr "Filter by author or website"
+
+#: msreader-files/includes/modules/filter-blog-author.php:4
+#, fuzzy
+msgid "Zeigt Beiträge des ausgewählten Autors oder der Webseite an"
+msgstr "Displays posts from the selected author or website"
+
+#: msreader-files/includes/modules/filter-blog-author.php:22
+#, fuzzy
+msgid "Alle Beiträge dieses Autors anzeigen"
+msgstr "Show all posts by this author"
+
+#: msreader-files/includes/modules/filter-blog-author.php:26
+#, fuzzy
+msgid "Alle Beiträge auf dieser Webseite anzeigen"
+msgstr "Show all posts on this website"
+
+#: msreader-files/includes/modules/filter-blog-author.php:33
+#: msreader-files/includes/modules/filter-blog-author.php:37
+#, fuzzy
+msgid "Beiträge von:"
+msgstr "Contributions from:"
+
+#: msreader-files/includes/modules/filter-blog-author.php:33
+#, fuzzy
+msgid "Webseite besuchen"
+msgstr "Visit website"
+
+#: msreader-files/includes/modules/follow.php:3
+#: msreader-files/includes/modules/follow.php:68
+#: msreader-files/includes/modules/follow.php:69
+#: msreader-files/includes/modules/follow.php:126
+#: msreader-files/includes/modules/follow.php:865
+#: msreader-files/includes/modules/follow.php:866
+#, fuzzy
+msgid "Follow"
+msgstr "Follow"
+
+#: msreader-files/includes/modules/follow.php:4
+#, fuzzy
+msgid "Ermöglicht das Folgen von Webseiten im Netzwerk"
+msgstr "Enables websites to be followed on the network"
+
+#: msreader-files/includes/modules/follow.php:5
+#: msreader-files/includes/modules/follow.php:74
+#: msreader-files/includes/modules/follow.php:116
+#: msreader-files/includes/modules/follow.php:125
+#: msreader-files/includes/modules/follow.php:859
+#, fuzzy
+msgid "Following"
+msgstr "Following"
+
+#: msreader-files/includes/modules/follow.php:51
+#, fuzzy
+msgid "Verfolgte Websites verwalten"
+msgstr "Manage tracked websites"
+
+#: msreader-files/includes/modules/follow.php:75
+#: msreader-files/includes/modules/follow.php:127
+#: msreader-files/includes/modules/follow.php:860
+#, fuzzy
+msgid "Unfollow"
+msgstr "Unfollow"
+
+#: msreader-files/includes/modules/follow.php:81
+#, fuzzy
+msgid "Listen verwalten"
+msgstr "Manage lists"
+
+#: msreader-files/includes/modules/follow.php:82
+#, fuzzy
+msgid "Verwalten von Listen für diese Webseite"
+msgstr "Managing lists for this website"
+
+#: msreader-files/includes/modules/follow.php:85
+#: msreader-files/includes/modules/follow.php:512
+#, fuzzy
+msgid "Zu Listen hinzufügen"
+msgstr "Add to lists"
+
+#: msreader-files/includes/modules/follow.php:86
+#, fuzzy
+msgid "Webseiten zu den Listen in Reader hinzufügen"
+msgstr "Add web pages to the lists in Reader"
+
+#: msreader-files/includes/modules/follow.php:90
+#, fuzzy
+msgid "Follow/Unfollow dieser Webseite im Reader"
+msgstr "Follow/Unfollow this website in the reader"
+
+#: msreader-files/includes/modules/follow.php:446
+#, fuzzy
+msgid "wird nun verfolgt."
+msgstr "is now being pursued."
+
+#: msreader-files/includes/modules/follow.php:446
+#: msreader-files/includes/modules/follow.php:459
+#, fuzzy
+msgid "Besuche die Website"
+msgstr "Visit the website"
+
+#: msreader-files/includes/modules/follow.php:459
+#, fuzzy
+msgid "wird nicht mehr verfolgt."
+msgstr "is no longer pursued."
+
+#: msreader-files/includes/modules/follow.php:470
+#: msreader-files/includes/modules/follow.php:484
+#: msreader-files/includes/modules/follow.php:531
+#, fuzzy
+msgid "Diese Aktion konnte nicht durchgeführt werden."
+msgstr "This action could not be carried out."
+
+#: msreader-files/includes/modules/follow.php:506
+#, fuzzy
+msgid "Blog-Listen aktualisiert."
+msgstr "Blog lists updated."
+
+#: msreader-files/includes/modules/follow.php:510
+#, fuzzy
+msgid "Verwalten von Listen"
+msgstr "Managing lists"
+
+#: msreader-files/includes/modules/follow.php:538
+#, fuzzy
+msgid "Listenname geändert."
+msgstr "List name changed."
+
+#: msreader-files/includes/modules/follow.php:546
+#, fuzzy
+msgid ""
+"Bevor Du diese Liste löschst, musst Du sie durch Markieren des "
+"Kontrollkästchens bestätigen."
+msgstr ""
+"Before you delete this list, you must confirm it by checking the checkbox."
+
+#: msreader-files/includes/modules/follow.php:559
+#, fuzzy
+msgid "Liste gelöscht."
+msgstr "List deleted."
+
+#: msreader-files/includes/modules/follow.php:571
+#, fuzzy, php-format
+msgid "%d Blog wurde zur Liste hinzugefügt."
+msgid_plural "%d Blogs wurden zur Liste hinzugefügt."
+msgstr[0] "%d Blog was added to the list."
+msgstr[1] "%d Blogs have been added to the list."
+
+#: msreader-files/includes/modules/follow.php:577
+#, fuzzy, php-format
+msgid "Wir konnten keine Webseite finden, die zu %s gehört."
+msgstr "We could not find a website that belongs to %s."
+
+#: msreader-files/includes/modules/follow.php:584
+#, fuzzy
+msgid "Listenname muss ausgefüllt werden."
+msgstr "List name must be filled in."
+
+#: msreader-files/includes/modules/follow.php:599
+#, fuzzy, php-format
+msgid "Liste mit %d Blog wurde erstellt."
+msgid_plural "Liste mit %d Blogs wurde erstellt."
+msgstr[0] "List with %d Blog was created."
+msgstr[1] "List with %d blogs has been created."
+
+#: msreader-files/includes/modules/follow.php:604
+#, fuzzy
+msgid "Liste wurde erstellt."
+msgstr "List has been created."
+
+#: msreader-files/includes/modules/follow.php:615
+#, fuzzy, php-format
+msgid ""
+"Liste existiert bereits. Du kannst sie <a href=\"%s\">hier</a> verwalten."
+msgstr "List already exists. You can manage it <a href=\"%s\">here</a>."
+
+#: msreader-files/includes/modules/follow.php:632
+#, fuzzy
+msgid "Wähle Listen für diese Webseite aus"
+msgstr "Select lists for this website"
+
+#: msreader-files/includes/modules/follow.php:649
+#, fuzzy
+msgid "Webseite zur neuen Liste hinzufügen"
+msgstr "Add website to the new list"
+
+#: msreader-files/includes/modules/follow.php:650
+#: msreader-files/includes/modules/follow.php:795
+#, fuzzy
+msgid "Gib hier den Namen der Liste ein"
+msgstr "Enter the name of the list here"
+
+#: msreader-files/includes/modules/follow.php:654
+#: msreader-files/includes/modules/follow.php:987
+msgid "Speichern"
+msgstr "Save"
+
+#: msreader-files/includes/modules/follow.php:774
+#, fuzzy
+msgid "Verwalte diese Liste"
+msgstr "Manage this list"
+
+#: msreader-files/includes/modules/follow.php:784
+#, fuzzy
+msgid "Neue Liste erstellen"
+msgstr "Create new list"
+
+#: msreader-files/includes/modules/follow.php:794
+#, fuzzy
+msgid "Name der neuen Liste"
+msgstr "Name of the new list"
+
+#: msreader-files/includes/modules/follow.php:799
+#: msreader-files/includes/modules/follow.php:979
+#, fuzzy
+msgid "Links zu Webseiten, die dieser Liste hinzugefügt werden"
+msgstr "Links to websites that will be added to this list"
+
+#: msreader-files/includes/modules/follow.php:800
+#: msreader-files/includes/modules/follow.php:980
+#, fuzzy, php-format
+msgid "Füge bitte eine %s-Seite pro Zeile hinzu."
+msgstr "Please add one %s page per line."
+
+#: msreader-files/includes/modules/follow.php:804
+msgid "Erstellen"
+msgstr "Create"
+
+#: msreader-files/includes/modules/follow.php:812
+#: msreader-files/includes/modules/follow.php:823
+#: msreader-files/includes/modules/follow.php:898
+#: msreader-files/includes/modules/follow.php:904
+#, fuzzy
+msgid "Meine Listen"
+msgstr "My lists"
+
+#: msreader-files/includes/modules/follow.php:898
+#: msreader-files/includes/modules/follow.php:901
+#, fuzzy
+msgid "Verwalten"
+msgstr "Manage"
+
+#: msreader-files/includes/modules/follow.php:901
+#: msreader-files/includes/modules/follow.php:907
+#, fuzzy
+msgid "Verfolgte Webseiten"
+msgstr "Tracked websites"
+
+#: msreader-files/includes/modules/follow.php:942
+#, fuzzy
+msgid "Verwalte Webseiten in dieser Liste"
+msgstr "Manage websites in this list"
+
+#: msreader-files/includes/modules/follow.php:947
+#, fuzzy
+msgid "Verwalte verfolgte Webseiten"
+msgstr "Manage tracked websites"
+
+#: msreader-files/includes/modules/follow.php:959
+#, fuzzy
+msgid "Beiträge von dieser Webseite ansehen"
+msgstr "View posts from this website"
+
+#: msreader-files/includes/modules/follow.php:977
+#, fuzzy
+msgid "Füge dieser Liste Webseiten hinzu"
+msgstr "Add websites to this list"
+
+#: msreader-files/includes/modules/follow.php:981
+#, fuzzy
+msgid "Webseiten hinzufügen"
+msgstr "Add websites"
+
+#: msreader-files/includes/modules/follow.php:985
+#, fuzzy
+msgid "Bearbeite diese Liste"
+msgstr "Edit this list"
+
+#: msreader-files/includes/modules/follow.php:987
+#, fuzzy
+msgid "Namen ändern:"
+msgstr "Change name:"
+
+#: msreader-files/includes/modules/follow.php:988
+#, fuzzy
+msgid "Lösche: <small>Markiere dieses Kontrollkästchen zur Bestätigung"
+msgstr "Delete: <small>Check this box to confirm"
+
+#: msreader-files/includes/modules/follow.php:988
+#, fuzzy
+msgid "und klicke</small>"
+msgstr "and click</small>"
+
+#: msreader-files/includes/modules/follow.php:988
+msgid "Löschen"
+msgstr "Delete"
+
+#: msreader-files/includes/modules/follow.php:1036
+#, fuzzy
+msgid "Du folgst noch keiner Webseite."
+msgstr "You are not following any websites yet."
+
+#: msreader-files/includes/modules/follow.php:1038
+#, fuzzy
+msgid "Suche nach etwas Interessantem"
+msgstr "Search for something interesting"
+
+#: msreader-files/includes/modules/follow.php:1091
+#, fuzzy
+msgid "Frontend- und Backend-Bereich"
+msgstr "Frontend and backend area"
+
+#: msreader-files/includes/modules/follow.php:1091
+#, fuzzy
+msgid "Frontend-Bereich"
+msgstr "Front-end area"
+
+#: msreader-files/includes/modules/follow.php:1091
+#, fuzzy
+msgid "Backend-Bereich"
+msgstr "Backend area"
+
+#: msreader-files/includes/modules/follow.php:1092
+#, fuzzy
+msgid "Angemeldete und abgemeldete Benutzer"
+msgstr "Logged in and logged out users"
+
+#: msreader-files/includes/modules/follow.php:1092
+#, fuzzy
+msgid "Angemeldete Benutzer"
+msgstr "Logged in users"
+
+#: msreader-files/includes/modules/follow.php:1095
+#, fuzzy
+msgid "Standardmäßig verfolgte Webseiten mit den IDs (durch Kommas getrennt)"
+msgstr "Websites tracked by default with the IDs (separated by commas)"
+
+#: msreader-files/includes/modules/follow.php:1098
+#, fuzzy
+msgid "Schaltfläche FOLLOW anzeigen"
+msgstr "Show FOLLOW button"
+
+#: msreader-files/includes/modules/follow.php:1103
+#, fuzzy
+msgid "Schaltfläche FOLLOW anzeigen für"
+msgstr "Show FOLLOW button for"
+
+#: msreader-files/includes/modules/my-posts.php:3
+#: msreader-files/includes/modules/my-posts.php:24
+#, fuzzy
+msgid "Meine Beiträge"
+msgstr "My contributions"
+
+#: msreader-files/includes/modules/my-posts.php:4
+#, fuzzy
+msgid "Zeigt die Beiträge des aktuellen Benutzers an"
+msgstr "Displays the posts of the current user"
+
+#: msreader-files/includes/modules/my-posts.php:24
+#, fuzzy
+msgid "Deine Beiträge anzeigen"
+msgstr "Show your posts"
+
+#: msreader-files/includes/modules/my-sites.php:3
+#: msreader-files/includes/modules/user-widget.php:62
+#, fuzzy
+msgid "Meine Webseiten"
+msgstr "My websites"
+
+#: msreader-files/includes/modules/my-sites.php:4
+#, fuzzy
+msgid "Zeigt Beiträge von aktuellen Benutzer-Webseiten an"
+msgstr "Displays posts from current user websites"
+
+#: msreader-files/includes/modules/popular-posts.php:3
+#, fuzzy
+msgid "Beliebte Beiträge"
+msgstr "Popular posts"
+
+#: msreader-files/includes/modules/popular-posts.php:4
+#, fuzzy
+msgid "Zeigt beliebte Beiträge an"
+msgstr "Displays popular posts"
+
+#: msreader-files/includes/modules/popular-posts.php:60
+#, fuzzy
+msgid ""
+"Mindestanzahl von Kommentaren zu einem Beitrag, damit er als beliebt gilt"
+msgstr "Minimum number of comments on a post for it to be considered popular"
+
+#: msreader-files/includes/modules/recent-posts.php:3
+#, fuzzy
+msgid "Neueste Beiträge"
+msgstr "Latest posts"
+
+#: msreader-files/includes/modules/recent-posts.php:4
+#, fuzzy
+msgid "Zeigt kürzlich hinzugefügte Beiträge an"
+msgstr "Displays recently added posts"
+
+#: msreader-files/includes/modules/rss-feeds.php:3
+#, fuzzy
+msgid "RSS Feeds"
+msgstr "RSS Feeds"
+
+#: msreader-files/includes/modules/rss-feeds.php:4
+#, fuzzy
+msgid ""
+"Ermöglicht Benutzern, Links für alle im Reader verfügbaren Beitragslisten "
+"abzurufen"
+msgstr ""
+"Allows users to retrieve links for all post lists available in the reader"
+
+#: msreader-files/includes/modules/rss-feeds.php:38
+#, fuzzy
+msgid "Erhalte einen privaten RSS-Feed für diese Seite"
+msgstr "Get a private RSS feed for this page"
+
+#: msreader-files/includes/modules/rss-feeds.php:57
+#, fuzzy
+msgid "Privater RSS-Feed für:"
+msgstr "Private RSS feed for:"
+
+#: msreader-files/includes/modules/rss-feeds.php:62
+#, fuzzy
+msgid ""
+"Bitte beachte, dass möglicherweise jeder mit dieser Feed-URL den "
+"Beitragsinhalt sehen kann."
+msgstr ""
+"Please note that anyone with this feed URL may be able to see the post "
+"content."
+
+#: msreader-files/includes/modules/rss-feeds.php:63
+#, fuzzy
+msgid ""
+"Du kannst ALLE privaten Feed-URLs zurücksetzen, indem Du <a href=\"#\" class="
+"\"msreader-rss-feeds-reset-key\">hier klickst</a>."
+msgstr ""
+"You can reset ALL private feed URLs by <a href=\"#\" class=\"msreader-rss-"
+"feeds-reset-key\">clicking here</a>."
+
+#: msreader-files/includes/modules/rss-feeds.php:203
+#: msreader-files/includes/modules/rss-feeds.php:204
+#: msreader-files/views/dashboard-reader/sidebar.php:7 msreader.php:95
+#: msreader.php:398
+#, fuzzy
+msgid "Reader"
+msgstr "Reader"
+
+#: msreader-files/includes/modules/search.php:3
+#: msreader-files/includes/modules/search.php:55
+msgid "Suche"
+msgstr "Search"
+
+#: msreader-files/includes/modules/search.php:4
+#, fuzzy
+msgid "Ermöglicht die Suche nach Beiträgen nach Titel, Autor oder Tag"
+msgstr "Allows you to search for posts by title, author or tag"
+
+#: msreader-files/includes/modules/search.php:45
+msgid "Suche..."
+msgstr "Search..."
+
+#: msreader-files/includes/modules/search.php:47
+#: msreader-files/includes/modules/widget-recent-posts.php:168
+msgid "Titel"
+msgstr "Title"
+
+#: msreader-files/includes/modules/search.php:50
+msgid "Autor"
+msgstr "Author"
+
+#: msreader-files/includes/modules/search.php:53
+msgid "Tag"
+msgstr "Day"
+
+#: msreader-files/includes/modules/shortcode-recent-posts-grid.php:3
+#, fuzzy
+msgid "Shortcode – Beitragsraster"
+msgstr "Shortcode - Post grid"
+
+#: msreader-files/includes/modules/shortcode-recent-posts-grid.php:4
+#, fuzzy
+msgid ""
+"Ermöglicht die Verwendung des Shortcodes [reader-posts-grid], um das "
+"Beitragsraster verschiedener Reader-Module anzuzeigen."
+msgstr ""
+"Enables the use of the [reader-posts-grid] shortcode to display the post "
+"grid of various reader modules."
+
+#: msreader-files/includes/modules/shortcode-recent-posts-grid.php:156
+#: msreader-files/views/dashboard-reader/content-post.php:31
+#: msreader-files/views/dashboard-reader/content-single.php:21
+#, fuzzy
+msgid "zuvor"
+msgstr "before"
+
+#: msreader-files/includes/modules/shortcode-recent-posts-grid.php:159
+#: msreader-files/views/dashboard-reader/content-post.php:32
+#: msreader-files/views/dashboard-reader/content-single.php:22
+msgid "von"
+msgstr "from"
+
+#: msreader-files/includes/modules/trending-tags.php:3
+#, fuzzy
+msgid "Trend-Tags"
+msgstr "Trend tags"
+
+#: msreader-files/includes/modules/trending-tags.php:4
+#, fuzzy
+msgid "Zeigt Trend-Tags an"
+msgstr "Displays trend tags"
+
+#: msreader-files/includes/modules/trending-tags.php:113
+#, fuzzy
+msgid "Anzahl der Links im Widget \"Trend-Tags\"."
+msgstr "Number of links in the \"Trend tags\" widget."
+
+#: msreader-files/includes/modules/trending-tags.php:115
+#, fuzzy
+msgid ""
+"Anzahl der kürzlich hinzugefügten Tags, um zu überprüfen, welche beliebt sind"
+msgstr "Number of recently added tags to check which ones are popular"
+
+#: msreader-files/includes/modules/user-widget.php:3
+#, fuzzy
+msgid "Benutzerinformation"
+msgstr "User information"
+
+#: msreader-files/includes/modules/user-widget.php:4
+#, fuzzy
+msgid ""
+"Zeigt zusätzliche Informationen zum aktuellen Benutzer im Haupt-Widget der "
+"Leserseite an"
+msgstr ""
+"Displays additional information about the current user in the main widget of "
+"the reader page"
+
+#: msreader-files/includes/modules/user-widget.php:54
+#, fuzzy
+msgid "Avatar ändern"
+msgstr "Change avatar"
+
+#: msreader-files/includes/modules/user-widget.php:62
+#, fuzzy
+msgid "Sieh Dir Deine Webseiten an"
+msgstr "Take a look at your websites"
+
+#: msreader-files/includes/modules/widget-recent-posts.php:3
+#, fuzzy
+msgid "Widget – Beitragsliste"
+msgstr "Widget - Contribution list"
+
+#: msreader-files/includes/modules/widget-recent-posts.php:4
+#, fuzzy
+msgid ""
+"Ermöglicht die Verwendung des Seitenleisten-Widgets, das die neuesten "
+"Beiträge anzeigt"
+msgstr "Enables the use of the sidebar widget, which displays the latest posts"
+
+#: msreader-files/includes/modules/widget-recent-posts.php:105
+msgid "Von "
+msgstr "From "
+
+#: msreader-files/includes/modules/widget-recent-posts.php:123
+#, fuzzy
+msgid "Liste der neuesten Beiträge"
+msgstr "List of the latest posts"
+
+#: msreader-files/includes/modules/widget-recent-posts.php:124
+#, fuzzy
+msgid "Reader: Neueste Beiträge"
+msgstr "Reader: Latest posts"
+
+#: msreader-files/includes/modules/widget-recent-posts.php:172
+#, fuzzy
+msgid "Anzahl der anzuzeigenden Beiträge:"
+msgstr "Number of posts to be displayed:"
+
+#: msreader-files/includes/modules/widget-recent-posts.php:177
+#, fuzzy
+msgid "Beitragsdatum anzeigen?"
+msgstr "Show contribution date?"
+
+#: msreader-files/includes/modules/widget-recent-posts.php:181
+#, fuzzy
+msgid "Auszug aus dem Beitrag anzeigen?"
+msgstr "Show excerpt from the article?"
+
+#: msreader-files/includes/modules/widget-recent-posts.php:185
+#, fuzzy
+msgid "Autor des Beitrags anzeigen?"
+msgstr "Show author of the article?"
+
+#: msreader-files/includes/modules/widget-recent-posts.php:188
+#, fuzzy
+msgid "Reader's Beitragsquelle:"
+msgstr "Reader's contribution source:"
+
+#: msreader-files/includes/modules/widget-recent-posts.php:210
+#, fuzzy, php-format
+msgid "Aus dem Reader von %s"
+msgstr "From the reader of %s"
+
+#: msreader-files/includes/modules/widget-recent-posts.php:213
+#, fuzzy
+msgid "Bitte beachte die Privatsphäre der Benutzer."
+msgstr "Please respect the privacy of users."
+
+#: msreader-files/views/dashboard-reader/comments.php:27
+#, fuzzy, php-format
+msgid "%s <span class=\"says\">sagt:</span>"
+msgstr "%s <span class=\"says\">says:</span>"
+
+#: msreader-files/views/dashboard-reader/comments.php:32
+#, fuzzy, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s um %2$s"
+msgstr "%1$s um %2$s"
+
+#: msreader-files/views/dashboard-reader/comments.php:47
+#, fuzzy
+msgid "Privater Kommentar"
+msgstr "Private commentary"
+
+#: msreader-files/views/dashboard-reader/comments.php:49 msreader.php:309
+#, fuzzy
+msgid "Genehmigen"
+msgstr "Approve"
+
+#: msreader-files/views/dashboard-reader/comments.php:51 msreader.php:310
+#, fuzzy
+msgid "Nicht genehmigen"
+msgstr "Do not approve"
+
+#: msreader-files/views/dashboard-reader/comments.php:54
+#, fuzzy
+msgid "Spam"
+msgstr "Spam"
+
+#: msreader-files/views/dashboard-reader/comments.php:55
+#, fuzzy
+msgid "Müll"
+msgstr "Garbage"
+
+#: msreader-files/views/dashboard-reader/comments.php:57
+#, fuzzy
+msgid "Dauerhaft löschen"
+msgstr "Permanently delete"
+
+#: msreader-files/views/dashboard-reader/comments.php:65
+msgid "Antwort"
+msgstr "Answer"
+
+#: msreader-files/views/dashboard-reader/comments.php:95
+#, fuzzy
+msgid "Noch keine Kommentare :("
+msgstr "No comments yet :("
+
+#: msreader-files/views/dashboard-reader/content-post.php:18
+msgid "Mehr lesen"
+msgstr "Read more"
+
+#: msreader-files/views/dashboard-reader/content-single.php:2
+#, fuzzy
+msgid "Vorherigen Beitrag anzeigen"
+msgstr "Show previous post"
+
+#: msreader-files/views/dashboard-reader/content-single.php:3
+#, fuzzy
+msgid "Nächsten Beitrag anzeigen"
+msgstr "Show next post"
+
+#: msreader-files/views/dashboard-reader/content-single.php:5
+#, fuzzy
+msgid "Original anzeigen"
+msgstr "Show original"
+
+#: msreader-files/views/dashboard-reader/content-single.php:7
+msgid "Bearbeiten"
+msgstr "Edit"
+
+#: msreader-files/views/dashboard-reader/content-single.php:9
+msgid "Veröffentlichen"
+msgstr "Publish"
+
+#: msreader-files/views/dashboard-reader/content-single.php:13
+#, fuzzy
+msgid "Overlay schließen"
+msgstr "Close overlay"
+
+#: msreader-files/views/dashboard-reader/content-single.php:33
+#, fuzzy
+msgid "Vorherige Kommentare laden"
+msgstr "Load previous comments"
+
+#: msreader-files/views/dashboard-reader/content-single.php:47
+#, fuzzy
+msgid "Einen Kommentar hinzufügen"
+msgstr "Add a comment"
+
+#: msreader-files/views/dashboard-reader/content-single.php:55
+msgid "Antwort an"
+msgstr "Answer to"
+
+#: msreader-files/views/dashboard-reader/content-single.php:55
+#, fuzzy
+msgid "cancel"
+msgstr "cancel"
+
+#: msreader-files/views/dashboard-reader/content-single.php:56
+msgid "Kommentar hinzufügen"
+msgstr "Add your comment"
+
+#: msreader-files/views/dashboard-reader/content-single.php:64
+#, fuzzy
+msgid "Kommentarfunktion ist geschlossen."
+msgstr "Comment function is closed."
+
+#: msreader-files/views/dashboard-reader/index.php:29
+msgid "Wird geladen..."
+msgstr "Will be loaded ..."
+
+#: msreader-files/views/dashboard-reader/sidebar.php:88
+#, fuzzy, php-format
+msgid "<a href=\"%s\">Reader-Einstellungen anpassen</a>"
+msgstr "<a href=\"%s\">Customize reader settings</a>"
+
+#: msreader-files/views/page-settings-network.php:3
+#, fuzzy
+msgid "Reader-Einstellungen"
+msgstr "Reader settings"
+
+#: msreader-files/views/page-settings-network.php:3
+#, fuzzy
+msgid "Gehe zum Reader"
+msgstr "Go to the reader"
+
+#: msreader-files/views/page-settings-network.php:4
+#, fuzzy
+msgid ""
+"Lese, entdecke, folge und moderiere Beiträge im Dashboard aller Webseiten in "
+"Deinem Netzwerk."
+msgstr ""
+"Read, discover, follow and moderate posts in the dashboard of all websites "
+"in your network."
+
+#: msreader-files/views/page-settings-network.php:17
+#, fuzzy
+msgid "Wo soll der Reader sein?"
+msgstr "Where should the reader be?"
+
+#: msreader-files/views/page-settings-network.php:21
+#, fuzzy
+msgid "Der Reader sollte sich unter Dashboard befinden"
+msgstr "The reader should be located under Dashboard"
+
+#: msreader-files/views/page-settings-network.php:22
+#, fuzzy
+msgid "Der Reader sollte die Standard-Homepage des Dashboards ersetzen."
+msgstr "The reader should replace the standard home page of the dashboard."
+
+#: msreader-files/views/page-settings-network.php:28
+#, fuzzy
+msgid "Wie soll die Reader-Seite heißen?"
+msgstr "What should the reader page be called?"
+
+#: msreader-files/views/page-settings-network.php:33
+#, fuzzy
+msgid "Dies ist der Name, der im Menü sichtbar sein wird"
+msgstr "This is the name that will be visible in the menu"
+
+#: msreader-files/views/page-settings-network.php:39
+#, fuzzy
+msgid "Welche Funktionen möchtest Du für den Reader aktivieren?"
+msgstr "Which functions would you like to activate for the reader?"
+
+#: msreader-files/views/page-settings-network.php:50
+#, fuzzy
+msgid "Konfigurieren"
+msgstr "Configure"
+
+#: msreader-files/views/page-settings-network.php:63
+#, fuzzy
+msgid ""
+"Sollten Beiträge von privaten Webseiten in den Reader aufgenommen werden?"
+msgstr "Should contributions from private websites be included in the Reader?"
+
+#: msreader-files/views/page-settings-network.php:67
+#, fuzzy
+msgid "Ja, Beiträge von allen Webseiten einbeziehen"
+msgstr "Yes, include contributions from all websites"
+
+#: msreader-files/views/page-settings-network.php:68
+#, fuzzy
+msgid ""
+"Nein, nur Beiträge von öffentlichen Webseiten einbeziehen (wo "
+"Suchmaschinensichtbarkeit aktiviert ist)"
+msgstr ""
+"No, only include posts from public websites (where search engine visibility "
+"is enabled)"
+
+#: msreader-files/views/page-settings-network.php:74
+#, fuzzy
+msgid "Welche Funktion ist auf der Reader-Seite standardmäßig verfügbar?"
+msgstr "Which function is available by default on the Reader page?"
+
+#: msreader-files/views/page-settings-network.php:91
+#, fuzzy
+msgid ""
+"Dies ist die Standardfunktion, die beim Öffnen der Reader-Seite verwendet "
+"wird"
+msgstr ""
+"This is the standard function that is used when opening the Reader page"
+
+#: msreader-files/views/page-settings-network.php:97
+msgid "Änderungen speichern"
+msgstr "Save changes"
+
+#: msreader.php:251
+#, fuzzy, php-format
+msgid ""
+"Der Multisite Theme Manager funktioniert nur in der Multisite-Konfiguration. "
+"Mehr darüber kannst Du <a href=\"%s\" target=\"_blank\">hier</a> lesen."
+msgstr ""
+"The Multisite Theme Manager only works in the Multisite configuration. You "
+"can read more about this <a href=\"%s\" target=\"_blank\">here</a>."
+
+#: msreader.php:268
+#, fuzzy
+msgid ""
+"<strong>Reader benötigt das Multisite Beitragsindex-Plugin, um zu "
+"funktionieren.</strong> Derzeit ist es nicht aktiv. Du kannst dieses Plugin "
+"<a href=\"https://n3rds.work/piestingtal_source/multisite-beitragsindex-"
+"plugin/\">hier erhalten</a>."
+msgstr ""
+"<strong>Reader requires the Multisite post index plugin to work.</strong> It "
+"is currently not active. You can <a href=\"https://n3rds.work/"
+"piestingtal_source/multisite-beitragsindex-plugin/\">get</a> this plugin <a "
+"href=\"https://n3rds.work/piestingtal_source/multisite-beitragsindex-plugin/"
+"\">here</a>."
+
+#: msreader.php:283
+#, fuzzy, php-format
+msgid ""
+"Das Reader-Plugin wurde aktiviert. Es kann konfiguriert werden, indem Du zu "
+"Netzwerkadministration > Einstellungen > <a href=\"%s\">Reader</a> gehst"
+msgstr ""
+"The Reader plugin has been activated. It can be configured by going to "
+"Network Administration &gt; Settings &gt; <a href=\"%s\">Reader</a> "
+
+#: msreader.php:307
+#, fuzzy
+msgid "Bist Du sicher, dass Du dies tun möchtest?"
+msgstr "Are you sure you want to do this?"
+
+#: msreader.php:308
+#, fuzzy
+msgid ""
+"Bist Du sicher, dass Du dies tun möchtest? Diese Aktion wirkt sich auch auf "
+"alle Antworten auf diesen Kommentar aus."
+msgstr ""
+"Are you sure you want to do this? This action will also affect all replies "
+"to this comment."
+
+#: msreader.php:374
+msgid "Standard"
+msgstr "Default"
+
+#: msreader.php:374
+#, fuzzy
+msgid "Startseite des Admin-Dashboards"
+msgstr "Home page of the admin dashboard"
+
+#: msreader.php:374
+#, fuzzy
+msgid "Untermenü des Admin-Dashboards"
+msgstr "Submenu of the admin dashboard"
+
+#: msreader.php:380
+#, fuzzy
+msgid "Reader Position"
+msgstr "Reader position"
+
+#: msreader.php:513
+msgid "Veröffentlicht"
+msgstr "Posted"
+
+#: msreader.php:619
+msgid "Erfolgreich gespeichert"
+msgstr "Successfully saved."
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:56
+#, fuzzy
+msgid "View details"
+msgstr "View details"
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:79
+#, fuzzy, php-format
+msgid "Weitere Informationen zu %s"
+msgstr "Further information on %s"
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:130
+#, fuzzy
+msgid "Auf neuere Version prüfen"
+msgstr "Check for newer version"
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:217
+#, fuzzy, php-format
+msgctxt "the plugin title"
+msgid "Keine neuere Version von %s im PSOURCE REPO gefunden."
+msgstr "No newer version of %s found in PSOURCE REPO."
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:219
+#, fuzzy, php-format
+msgctxt "the plugin title"
+msgid "Im PSOURCE REPO ist eine <b>neuere Version von %s</b> verfügbar!."
+msgstr "A <b>newer version of %s</b> is available in the PSOURCE REPO!"
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:221
+#, fuzzy, php-format
+msgctxt "the plugin title"
+msgid ""
+"Entschuldige, es konnte nicht festgestellt werden, ob Updates für %s "
+"verfügbar sind."
+msgstr ""
+"Sorry, it could not be determined whether updates are available for %s."
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:227
+#, fuzzy, php-format
+msgid "Unbekannter PSOURCE-UPDATTER-Status \"%s\""
+msgstr "Unknown PSOURCE-UPDATTER status \"%s\""
+
+#: psource/psource-plugin-update/Puc/v5p0/Vcs/PluginUpdateChecker.php:98
+#, fuzzy
+msgid "There is no changelog available."
+msgstr "There is no changelog available."
+
+#. Plugin Name of the plugin/theme
+#, fuzzy
+msgid "Multiste-Reader"
+msgstr "Multiste reader"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+#, fuzzy
+msgid "https://n3rds.work"
+msgstr "https://n3rds.work"
+
+#. Description of the plugin/theme
+#, fuzzy
+msgid ""
+"Aktivierter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können"
+msgstr "Enabled reader that allows users to browse posts on the network"
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "WMS N@W"
+msgstr "WMS N@W"

@@ -17,6 +17,10 @@ Mit dem Multisite-Reader erstellst Du einen Netzwerkweiten Newsfeed für Deine B
 
 Du kannst ganz einfach einzelnen Blogs in Deinem Netzwerk folgen um so über die Neusten Beiträge und Inhalte Deiner favorisierten Netzwerk-Seiten informiert zu bleiben.
 
+= HINWEIS =
+
+Multiste-Reader funktioniert nur in einem Multisite-Netzwerk und benötigt unser [Multisite Beitragsindex-Plugin](https://n3rds.work/piestingtal_source/multisite-beitragsindex-plugin/) um zu funktionieren!
+
 [POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/psource-plugins/)
 
 == Mehr PSOURCE ==
@@ -63,6 +67,12 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 
 == ChangeLog ==
+
+= 1.3.4 =
+
+* Textanpassungen
+* Hilfelinks aktualisiert
+* Add: it_IT, en_US, 
 
 = 1.3.3 =
 

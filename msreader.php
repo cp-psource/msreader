@@ -248,7 +248,7 @@ class WMD_MSReader {
 
 	function activate() {
 	   	if(!is_multisite())
-	    	trigger_error(sprintf(__('Multisite Theme Manager only works in multisite configuration. You can read more about it <a href="%s" target="_blank">here</a>.', 'wmd_prettythemes'), 'http://codex.wordpress.org/Create_A_Network'),E_USER_ERROR);
+	    	trigger_error(sprintf(__('Der Multisite Theme Manager funktioniert nur in der Multisite-Konfiguration. Mehr darüber kannst Du <a href="%s" target="_blank">hier</a> lesen.', 'wmd_prettythemes'), 'http://codex.wordpress.org/Create_A_Network'),E_USER_ERROR);
  		else {
 	        //save default options
 			if($this->plugin['site_options'] == 0)
@@ -265,7 +265,7 @@ class WMD_MSReader {
 
 		$page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 0;
 		if ((($page === 'msreader.php' && $pagenow == 'settings.php') || $pagenow == 'plugins.php') && is_super_admin() )
-			echo '<div class="error"><p>'.__('<strong>Reader needs Post Indexer plugin to work.</strong> Currently it is not active. You can get this plugin <a href="https://premium.wpmudev.org/project/post-indexer/">here</a>.', 'wmd_prettyplugins').'</p></div>';
+			echo '<div class="error"><p>'.__('<strong>Reader benötigt das Multisite Beitragsindex-Plugin, um zu funktionieren.</strong> Derzeit ist es nicht aktiv. Du kannst dieses Plugin <a href="https://n3rds.work/piestingtal_source/multisite-beitragsindex-plugin/">hier erhalten</a>.', 'wmd_prettyplugins').'</p></div>';
 	}
 
 	function welcome_notice() {
@@ -280,7 +280,7 @@ class WMD_MSReader {
 			update_site_option( 'msreader_notice_viewed', $notice_version );
 		}
 		elseif($notice_version < $desired_notice_version && $pagenow == 'plugins.php' && is_super_admin() )
-			echo '<div class="updated"><p>'.sprintf(__('Reader plugin has been activated. It can be configured  by going to Network Admin > Settings > <a href="%s">Reader</a>', 'wmd_prettyplugins'), admin_url('network/settings.php?page=msreader.php')).'</p></div>';
+			echo '<div class="updated"><p>'.sprintf(__('Das Reader-Plugin wurde aktiviert. Es kann konfiguriert werden, indem Du zu Netzwerkadministration > Einstellungen > <a href="%s">Reader</a> gehst', 'wmd_prettyplugins'), admin_url('network/settings.php?page=msreader.php')).'</p></div>';
 	}
 
 	function register_scripts_styles_admin($hook) {
