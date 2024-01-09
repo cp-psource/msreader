@@ -934,7 +934,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
                 foreach ($followed_by_user as $blog_id) {
                     $blog_details = get_blog_details($blog_id);
                     
-                    $followed_by_user_ready[] = array('link' => $this->get_module_dashboard_url(array('blog_id' => $blog_details->blog_id), 'filter_blog_author'),'title' => wp_trim_words($blog_details->blogname, 10), 'after' => ' <span class="blog-info" data-blog_id="'.$blog_details->blog_id.'"><a class="add-new-h2 button-small following" href="'.$blog_details->siteurl.'" title="Visit this site"><span class="dashicons dashicons-admin-links"></span></a> &nbsp;'.$this->get_follow_button($blog_details->blog_id, 'manage_list').'</span>');
+                    $followed_by_user_ready[] = array('link' => $this->get_module_dashboard_url(array('blog_id' => $blog_details->blog_id), 'filter_blog_author'),'title' => wp_trim_words($blog_details->blogname, 10), 'after' => ' <span class="blog-info" data-blog_id="'.$blog_details->blog_id.'"><a class="add-new-h2 button-small following" href="'.$blog_details->siteurl.'" title="Webseite besuchen"><span class="dashicons dashicons-admin-links"></span></a> &nbsp;'.$this->get_follow_button($blog_details->blog_id, 'manage_list').'</span>');
                 }
                 usort($followed_by_user_ready, array($this->helpers, 'array_sort_by_sub_title'));
 

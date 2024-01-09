@@ -68,6 +68,10 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 == ChangeLog ==
 
+= 1.3.6 =
+
+* Optimiert: Texte
+
 = 1.3.5 =
 
 * Fix: Fatal PhP Error in Follow-List
