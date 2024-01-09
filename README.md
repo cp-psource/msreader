@@ -1,6 +1,6 @@
-# Reader
+# Multiste-Reader
 
-**Aktivierter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können.**
+**Netzwerkweiter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können.**
 
 ## Verwendung
 

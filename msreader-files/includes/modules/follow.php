@@ -671,7 +671,7 @@ class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
             else {
                 end($this->user_follow_data['lists']);
                 $last_key = str_replace('list', '', key($this->user_follow_data['lists']));
-                $new_key = $last_key + 1;
+                $new_key = intval($last_key) + 1;
 
                 $new_key = 'list'.$new_key;
                 $this->user_follow_data['lists'][$new_key] = esc_attr($new_list_name);

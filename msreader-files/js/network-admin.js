@@ -4,7 +4,7 @@
 			$('.reader-menu-page').text($(this).val());
 		});
 
-		$('#msreader-control-modules .open-module-options').click(function(event) {
+		$('#msreader-control-modules .open-module-options').on('click', function(event) {
 			event.preventDefault();
 
 			var target = $(this).attr('data-module');

@@ -2,8 +2,8 @@
 /*
 Plugin Name: Multiste-Reader
 Plugin URI: https://n3rds.work
-Description: Aktivierter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können
-Version: 1.3.4
+Description: Netzwerkweiter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können
+Version: 1.3.5
 Network: false
 Text Domain: wmd_msreader
 Author: WMS N@W

@@ -4,12 +4,12 @@ Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free
 Tags: multisite, reader, content, feed
 Requires at least: 4.9
 Tested up to: 5.6
-Stable tag: 1.3.4
+Stable tag: 1.3.5
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Aktivierter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können
+Netzwerkweiter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können
 
 == Description ==
 
@@ -67,6 +67,12 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 
 == ChangeLog ==
+
+= 1.3.5 =
+
+* Fix: Fatal PhP Error in Follow-List
+* Fix: Veraltetes jQuery
+* Optimiert: Texte
 
 = 1.3.4 =
 
