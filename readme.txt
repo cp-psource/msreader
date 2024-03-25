@@ -29,6 +29,7 @@ Multiste-Reader funktioniert nur in einem Multisite-Netzwerk und benötigt unser
 * Optimiert: Texte
 * Fix: Deprecated Dynamic Propertys
 * Links aktualisiert
+* Updater 1.3
 
 = 1.3.5 =
 
