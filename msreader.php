@@ -1,22 +1,50 @@
 <?php
 /*
 Plugin Name: Multiste-Reader
-Plugin URI: https://n3rds.work
+Plugin URI: https://cp-psource.github.io/msreader/
 Description: Netzwerkweiter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können
 Version: 1.3.5
 Network: false
 Text Domain: wmd_msreader
 Author: WMS N@W
-Author URI: https://n3rds.work
+Author URI: https://github.com/cp-psource
 */
 
-require 'psource/psource-plugin-update/psource-plugin-updater.php';
-use Psource\PluginUpdateChecker\v5\PucFactory;
-$MyUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=msreader', 
-	__FILE__, 
-	'msreader' 
+/*
+Copyright 2018-2024 PSOURCE (https://github.com/cp-psource/)
+Author DerN3rd
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License (Version 2 � GPLv2) as published by
+the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+*/
+/**
+ * @@@@@@@@@@@@@@@@@ PS UPDATER 1.3 @@@@@@@@@@@
+ **/
+require 'psource/psource-plugin-update/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+ 
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/cp-psource/msreader',
+	__FILE__,
+	'msreader'
 );
+ 
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
+
+/**
+ * @@@@@@@@@@@@@@@@@ ENDE PS UPDATER 1.3 @@@@@@@@@@@
+ **/
 
 define( 'MSREADER_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
