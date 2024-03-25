@@ -3,7 +3,7 @@
 Plugin Name: Multiste-Reader
 Plugin URI: https://cp-psource.github.io/msreader/
 Description: Netzwerkweiter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können
-Version: 1.3.5
+Version: 1.3.6
 Network: false
 Text Domain: wmd_msreader
 Author: WMS N@W
