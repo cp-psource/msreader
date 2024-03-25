@@ -1,34 +1,37 @@
 <?php
 //Class with default functions for all modules. Fast to use and easy to customize
 abstract class WMD_MSReader_Modules {
-    var $db_network_posts;
-    var $db_network_terms;
-    var $db_network_term_rel;
-    var $db_blogs;
-    var $db_users;
+    public $db_network_posts;
+    public $db_network_terms;
+    public $db_network_term_rel;
+    public $db_blogs;
+    public $db_users;
 
-    var $page;
-    var $limit;
-    var $limit_sample;
-    var $args;
-    var $cache_init = 1;
-    var $main = 0;
-    var $query_hashes = array();
-    var $user;
+    public $page;
+    public $limit;
+    public $limit_sample;
+    public $args;
+    public $cache_init = 1;
+    public $main = 0;
+    public $query_hashes = array();
+    public $user;
 
-    var $options;
+    public $options;
 
-    var $message;
-    var $message_type = true;
+    public $message;
+    public $message_type = true;
 
-    var $helpers;
+    public $helpers;
 
-	function __construct($options = array(), $slug = '') {
-		global $msreader_available_modules, $wpdb, $msreader_helpers;
+    public $details;
+    public $db_network_term_tax; // Added to fix the deprecated warning
 
-		//set module details
+    public function __construct($options = array(), $slug = '') {
+        global $msreader_available_modules, $wpdb, $msreader_helpers;
+
+        //set module details
         end($msreader_available_modules);
-		$this->details = $msreader_available_modules[$slug];
+        $this->details = $msreader_available_modules[$slug];
 
         //set options for module
         $this->options = $options;
@@ -38,56 +41,57 @@ abstract class WMD_MSReader_Modules {
 
         //fix translation issues
         $this->details['name'] = __($this->details['name'], 'wmd_msreader');
-		//sets default unnecessary data
-		if(!isset($this->details['page_title']))
-			$this->details['page_title'] = $this->details['name'];
+        //sets default unnecessary data
+        if (!isset($this->details['page_title']))
+            $this->details['page_title'] = $this->details['name'];
         else
             $this->details['page_title'] = __($this->details['page_title'], 'wmd_msreader');
-		if(!isset($this->details['menu_title']))
-			$this->details['menu_title'] = $this->details['name'];
+        if (!isset($this->details['menu_title']))
+            $this->details['menu_title'] = $this->details['name'];
         else
             $this->details['menu_title'] = __($this->details['menu_title'], 'wmd_msreader');
 
-        if(!isset($this->details['can_be_default']))
+        if (!isset($this->details['can_be_default']))
             $this->details['can_be_default'] = true;
-        if(!isset($this->details['global_cache']))
+        if (!isset($this->details['global_cache']))
             $this->details['global_cache'] = false;
-        if(!isset($this->details['blog_specific_cache']))
+        if (!isset($this->details['blog_specific_cache']))
             $this->details['blog_specific_cache'] = false;
-        if(!isset($this->details['disable_cache']))
+        if (!isset($this->details['disable_cache']))
             $this->details['disable_cache'] = false;
-        if(!isset($this->details['cache_time']))
+        if (!isset($this->details['cache_time']))
             $this->details['cache_time'] = 900;
-        if(!isset($this->details['type']))
+        if (!isset($this->details['type']))
             $this->details['default'] = 'other';
-        if(!is_array($this->details['type']))
+        if (!is_array($this->details['type']))
             $this->details['type'] = array($this->details['type']);
-        if(!isset($this->details['allow_count']))
+        if (!isset($this->details['allow_count']))
             $this->details['allow_count'] = false;
 
         //set DB details
-        $this->db_network_posts = apply_filters('msreader_db_network_posts', $wpdb->base_prefix.'network_posts');
-        $this->db_network_terms = apply_filters('msreader_db_network_terms', $wpdb->base_prefix.'network_terms');
-        $this->db_network_term_rel = apply_filters('msreader_db_network_relationships', $wpdb->base_prefix.'network_term_relationships');
-        $this->db_network_term_tax = apply_filters('msreader_db_network_taxonomy', $wpdb->base_prefix.'network_term_taxonomy');
-        $this->db_blogs = $wpdb->base_prefix.'blogs';
-        $this->db_users = $wpdb->base_prefix.'users';
+        $this->db_network_posts = apply_filters('msreader_db_network_posts', $wpdb->base_prefix . 'network_posts');
+        $this->db_network_terms = apply_filters('msreader_db_network_terms', $wpdb->base_prefix . 'network_terms');
+        $this->db_network_term_rel = apply_filters('msreader_db_network_relationships', $wpdb->base_prefix . 'network_term_relationships');
+        $this->db_network_term_tax = apply_filters('msreader_db_network_taxonomy', $wpdb->base_prefix . 'network_term_taxonomy'); // Added to fix the deprecated warning
+        $this->db_blogs = $wpdb->base_prefix . 'blogs';
+        $this->db_users = $wpdb->base_prefix . 'users';
 
         //enable easy use of helpers functions
         $this->helpers = $msreader_helpers;
 
-		//do the custom init by module
-		$this->init();
+        //do the custom init by module
+        $this->init();
 
         //enable blog post linking without switch to blog
-        if(isset($_GET['msreader_'.$this->details['slug']]) && $_GET['msreader_'.$this->details['slug']] == 'open_post' && isset($_GET['post_id']) && isset($_GET['blog_id'])) {
-            add_action('init', array( $this, "open_site_post" ), 20);
+        if (isset($_GET['msreader_' . $this->details['slug']]) && $_GET['msreader_' . $this->details['slug']] == 'open_post' && isset($_GET['post_id']) && isset($_GET['blog_id'])) {
+            add_action('init', array($this, "open_site_post"), 20);
         }
     }
-    abstract function init();
 
-    function load_module() {
-        $this->cache_init = $this->details['global_cache'] ? get_site_option('msreader_cache_init_'.$this->details['slug'], 1) : get_user_option('msreader_cache_init_'.$this->details['slug'], $this->get_user());
+    abstract public function init();
+
+    public function load_module() {
+        $this->cache_init = $this->details['global_cache'] ? get_site_option('msreader_cache_init_' . $this->details['slug'], 1) : get_user_option('msreader_cache_init_' . $this->details['slug'], $this->get_user());
         $this->cache_init = $this->cache_init == false ? 1 : $this->cache_init;
     }
 
