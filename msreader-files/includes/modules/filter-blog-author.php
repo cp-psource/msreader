@@ -10,6 +10,9 @@ $module = array(
 );
 
 class WMD_MSReader_Module_FilterBlogAuthor extends WMD_MSReader_Modules {
+    public $last_date;
+    public $blog;
+    
 	function init() {
 		add_filter('msreader_post_author', array($this,'add_author_link'),10,2);
         add_filter('msreader_post_blog', array($this,'add_blog_link'),10,2);
