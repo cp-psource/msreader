@@ -9,6 +9,9 @@ $module = array(
 );
 
 class WMD_MSReader_Module_RecentPost extends WMD_MSReader_Modules {
+    public $last_date; 
+    public $blog;
+
 	function init() {
 		add_filter( 'msreader_dashboard_reader_sidebar_widgets', array($this,'add_link_to_widget'), 30 );
     }

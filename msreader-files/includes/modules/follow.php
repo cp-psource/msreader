@@ -15,6 +15,8 @@ $module = array(
 );
 
 class WMD_MSReader_Module_Follow extends WMD_MSReader_Modules {
+    public $blog;
+    public $last_date;
 
     var $user_follow_data;
 

@@ -12,6 +12,9 @@ $module = array(
 );
 
 class WMD_MSReader_Module_PopularPost extends WMD_MSReader_Modules {
+    public $blog;
+    public $last_date;
+    
 	function init() {
 		add_filter( 'msreader_dashboard_reader_sidebar_widgets', array($this,'add_link_to_widget'), 20 );
 

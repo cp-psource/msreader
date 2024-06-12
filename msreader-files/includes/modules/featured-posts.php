@@ -8,6 +8,8 @@ $module = array(
 );
 
 class WMD_MSReader_Module_FeaturedPosts extends WMD_MSReader_Modules {
+    public $last_date;
+    public $blog;
 
 	function init() {
         add_filter( 'msreader_dashboard_reader_sidebar_widgets', array($this,'add_link_to_widget'), 10 );
@@ -84,7 +86,7 @@ class WMD_MSReader_Module_FeaturedPosts extends WMD_MSReader_Modules {
     function enqueue_scripts() {
         wp_enqueue_script('jquery');
 
-        wp_localize_script('jquery', 'ajaxurl', admin_url( 'admin-ajax.php' ));
+        wp_add_inline_script('jquery', 'ajaxurl', admin_url( 'admin-ajax.php' ));
         wp_localize_script('jquery', 'msreader_featured_posts', array(
             'saving' => __( 'Speichern...', 'wmd_msreader' ), 
             'post_featured' => __( "Dieser Beitrag ist ausgewählt", "wmd_msreader" ),

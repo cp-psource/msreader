@@ -24,6 +24,10 @@ Multiste-Reader funktioniert nur in einem Multisite-Netzwerk und benötigt unser
 
 == ChangeLog ==
 
+= 1.3.7 =
+
+*Fix: Creation of dynamic property
+
 = 1.3.6 =
 
 * Optimiert: Texte
