@@ -26,7 +26,8 @@ Multiste-Reader funktioniert nur in einem Multisite-Netzwerk und benötigt unser
 
 = 1.3.7 =
 
-*Fix: Creation of dynamic property
+* Fix: Creation of dynamic property
+* Fix: .fn.scroll() event
 
 = 1.3.6 =
 
