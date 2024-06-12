@@ -53,7 +53,7 @@ var MSReader = function($) {
         },500);
 
 		//load on windows scrolling
-		$(window).scroll(function() {
+		$(window).on('scroll', function() {
 			if(!msreader_main_query.ajax_loading && !msreader_main_query.end && $(this).scrollTop() >= $(document).height() - $(this).height() - $(this).height()/3) {
 				display_posts_ajax();
 			}
