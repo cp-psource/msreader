@@ -162,9 +162,16 @@
 	font-weight: bold !important;
 }
 .msreader-post-content img {
-	max-width: 100%;
+	max-width: 46%;
 	height: auto;
 	float: none;
+}
+@media screen and (max-width: 782px) {
+	.msreader-post-content img {
+		max-width: 80%;
+		height: auto;
+		float: none;
+	}
 }
 #msreader-dashboard iframe, .msreader-post-overlay iframe {
 	max-width: 100%;
