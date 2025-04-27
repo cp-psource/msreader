@@ -6,12 +6,12 @@ Description: Netzwerkweiter Reader, mit dem Benutzer Beiträge im Netzwerk durch
 Version: 1.3.6
 Network: false
 Text Domain: wmd_msreader
-Author: WMS N@W
+Author: DerN3rd
 Author URI: https://github.com/cp-psource
 */
 
 /*
-Copyright 2018-2024 PSOURCE (https://github.com/cp-psource/)
+Copyright 2018-2025 PSOURCE (https://github.com/cp-psource/)
 Author DerN3rd
 
 This program is free software; you can redistribute it and/or modify
@@ -293,7 +293,7 @@ class WMD_MSReader {
 
 		$page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 0;
 		if ((($page === 'msreader.php' && $pagenow == 'settings.php') || $pagenow == 'plugins.php') && is_super_admin() )
-			echo '<div class="error"><p>'.__('<strong>Reader benötigt das Multisite Beitragsindex-Plugin, um zu funktionieren.</strong> Derzeit ist es nicht aktiv. Du kannst dieses Plugin <a href="https://n3rds.work/piestingtal_source/multisite-beitragsindex-plugin/">hier erhalten</a>.', 'wmd_prettyplugins').'</p></div>';
+			echo '<div class="error"><p>'.__('<strong>Multisite-Reader benötigt das Multisite Beitragsindex-Plugin, um zu funktionieren.</strong> Du kannst dieses Plugin <a href="https://n3rds.work/piestingtal_source/multisite-beitragsindex-plugin/" target="blank">hier herunterladen.</a>.', 'wmd_prettyplugins').'</p></div>';
 	}
 
 	function welcome_notice() {
