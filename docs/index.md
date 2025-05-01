@@ -1,4 +1,15 @@
-# Multiste-Reader
+---
+layout: psource-theme
+title: "Multiste-Reader"
+---
+
+<h2 align="center" style="color:#38c2bb;">📚 Multiste-Reader</h2>
+
+<div class="menu"> 
+  <a href="https://github.com/cp-psource/msreader/discussions" style="color:#38c2bb;">💬 Forum</a> 
+  <a href="https://github.com/cp-psource/msreader/releases" style="color:#38c2bb;">📝 Download</a>
+  <a href="https://cp-psource.github.io/ps-postindexer/" style="color:#ff0000;">📖 ! BENÖTIGT MULTISITE-INDEX !</a>
+</div>
 
 **Netzwerkweiter Reader, mit dem Benutzer Beiträge im Netzwerk durchsuchen können.**
 
