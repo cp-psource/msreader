@@ -1,3 +1,8 @@
+---
+layout: psource-theme
+title: "ÜBER PSOURCE"
+---
+
 ## PSOURCE - DEUTSCH
 ## PSOURCE ist eine Sammlung von Plugins und Themes für Classic/WordPress, die kostenlos nutzbar sind. Es gibt keine Premium-Features, Abo-Kosten oder ähnliches. Alles ist komplett kostenlos in vollem Umfang nutzbar. Die Community ist eingeladen, zu ihren Favoriten beizutragen und diese gemeinsam weiterzuentwickeln
 
